@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Wine</title>
+    <style>
+      @keyframes glassAnimation {
+        0%   {background-image: url('./src/app/images/animations/glass/Frame_1.png');}
+        7.69%   {background-image: url('./src/app/images/animations/glass/Frame_2.png');}
+        15.38%  {background-image: url('./src/app/images/animations/glass/Frame_3.png');}
+        23.07%  {background-image: url('./src/app/images/animations/glass/Frame_4.png');}
+        30.76%  {background-image: url('./src/app/images/animations/glass/Frame_5.png');}
+        38.46%  {background-image: url('./src/app/images/animations/glass/Frame_6.png');}
+        46.15%  {background-image: url('./src/app/images/animations/glass/Frame_7.png');}
+        53.84%  {background-image: url('./src/app/images/animations/glass/Frame_6.png');}
+        61.53%  {background-image: url('./src/app/images/animations/glass/Frame_5.png');}
+        69.22%  {background-image: url('./src/app/images/animations/glass/Frame_4.png');}
+        76.92%  {background-image: url('./src/app/images/animations/glass/Frame_3.png');}
+        84.61%  {background-image: url('./src/app/images/animations/glass/Frame_2.png');}
+        92.30%   {background-image: url('./src/app/images/animations/glass/Frame_1.png');}
+        100.00%   {background-image: url('./src/app/images/animations/glass/Frame_1.png');}
+      }
+      .btn-secondary {
+        background-color: #C46F48;
+        transition: .2s;
+        color:#DDDDDD;
+      }
+      .position-relative:hover .btn-secondary {
+        background-color: #C46F48;
+        color:#FFFFFF;
+        transition: .2s;
+        border: 1px solid #DDD;
+      }
+      .parallax {
+            min-height: 500px;
+            background: transparent;
+        }
+      .text-grey {
+        color:grey!important;
+      }
+      .bg-dark2 {
+        background-color: #1c1c1c;
+      }
+      .text-light {
+        color: #B7B7B7!important;
+      }
+      .nav-link {
+        padding: 8px;
+        font-weight: 300;
+        font-size: 12px;
+        color: #000000;
+      }
+      .position-relative .bg-dark {
+        transition: .5s;
+        opacity: 0;
+      }
+      .position-relative:hover .bg-dark {
+        opacity: .4;
+        transition: .5s;
+        color: #FFFFFF;
+      }
+      .position-relative:hover .btn-secondary {
+        box-shadow: 0px 2px 20px 0px #FFF;
+      }
+      .position-relative h6{
+        font-weight: 900;
+      } 
+      .position-relative small {
+        font-weight: 700;
+      } 
+      .position-relative:hover h6,.position-relative:hover h2,.position-relative:hover small {
+        color: #FFF!important;
+        transition: .5s;
+      } 
+      #parallax2 small, #parallax2 h6 {
+        color: #DDD;
+        transition: .5s;
+      } 
+      
+
+      #glass {
+        width: 300px;
+        height: 300px;
+        animation: glassAnimation 1s infinite;
+        background-position: center;
+        background-size: contain;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #BBB;
+        border-radius: 5px!important;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      
+    </style>
+  </head>
+  <body style="overflow: hidden;">
+    <div id="loadingGlass" class="d-none position-absolute bg-light" style="height: 100vh; width: 100%; z-index:3000;">
+    <div class="h-100 w-100 d-flex flex-column  justify-content-center">
+      <div class="d-flex justify-content-center p-5">
+        <div id="glass"></div>
+      </div>
+    </div>
+  </div>
+    <div id="video" class=" animate__slow animate__fadeInDown d-none fixed-top w-100 bg-transparent" style="height: 100vh;">
+      <div class="card p-0 border-0 container-fluid h-100 bg-transparent position-relative">
+        <div class="row h-100">
+          <div class="col-2 d-none d-lg-block" style="
+          background: rgba(0,0,0,.3);"></div>
+        <div class="col-12 col-lg-8 d-flex flex-column justify-content-center" style="
+        background: rgba(0,0,0,.3);">
+          <div class="position-absolute w-100 h-100">
+          </div>
+          <div class="card-body p-5 h-100 bg-black position-relative ">
+            <div class="w-100 h-100 position-relative ">
+              <div class="h-100 w-100 d-flex flex-column justify-content-center">
+                <div style="height: 70%!important;" class="position-absolute w-100 h-100">
+                  
+              <div class="mt-2 px-2 d-flex justify-content-end position-absolute w-100" style="
+              z-index: 2000;
+              height: 40px;">
+                <button onclick="action('closeVideo')" class=" btn btn-light rounded rounded-pill" style="width: 40px;
+                transform: scale(.7);
+                opacity: .5;">
+                  <img class="h-100 w-100" style="transform: scale(1.5);" src="./src/app/images/icons/close.svg" alt="">
+                </button>
+              </div>
+                <video  class="h-100 bg-black" style="width: -webkit-fill-available;" controls>
+                  <source src="movie.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              </div>
+          
+            </div>
+            
+            </div>
+          </div>
+          <div class="col-2 d-none d-lg-block" style="
+          background: rgba(0,0,0,.3);"></div>
+        </div>
+      </div>
+    </div>
+    <div class="menu d-none fixed-top " style="z-index:1000; background-color: #C27248; width:100%; height:100vh;">
+      <div class="container h-100 d-flex flex-column justify-content-between">
+        <a onclick="action('closeMenu')" class="p-3 btn d-flex justify-content-end">
+          <img src="./src/app/images/icons/close_white.svg" alt="">
+        </a>
+        <ul id="menuList" class="animate__animated animate__fadeIn animate__slow nav d-flex flex-column text-center animate__slow animate__fadeInUp" style="font-size:xx-large;">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h2 class="btn-link-dark">HOME</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./la_storia.html"><h2 class="btn-link-primary">LA STORIA</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h2 class="btn-link-primary">VIGNETI</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h2 class="btn-link-primary">VITIGNI</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h2 class="btn-link-primary">CONTATTI</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h2 class="btn-link-primary">EN</h2></a>
+          </li>
+        </ul> 
+        <div class="p-3"></div>
+      </div>
+    </div>
+    <div id="navbar" class="w-100 shadow py-3 fixed-top bg-white" style="z-index:500!important">
+      <div class="container"><div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <div class="px-3 py-1">
+            <img height="40px" src="./src/app/images/logo_test.png" alt="">
+          </div>  
+     
+          <ul class="d-none d-md-flex align-items-center nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./la_storia.html">LA STORIA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VIGNETI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">VITIGNI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTATTI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EN</a>
+            </li>
+          </ul> 
+            <div class=" d-flex d-md-none flex-column justify-content-center">
+              <a onclick="action('openMenu')" class="btn d-flex flex-column justify-content-center">
+                <img src="./src/app/images/icons/hamburger.svg" alt="">
+              </a>  
+            </div>
+          </div>
+      </div></div>
+    </div>
+    <div id="parallax1" class="animate__animated animate__fadeIn animate__slow parallax w-100 " data-parallax="scroll" data-image-src="./src/app/images/vitigno.png">
+      
+    </div>
+    <div id="main" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column">            
+              <main class="px-3">
+                <h2 class="py-2 mb-4">Chi Siamo</h2>
+                <small class="">      
+                  AlfaPrivativo è un’azienda agricola operante nel Territorio Umbro con l’obiettivo di produrre vini naturali, semplificando i processi agricoli ed enologici, senza perdonarne i difetti. La mission aziendale è quella di portare in bottiglia un concetto di autenticità, dove il vino viene lasciato libero di esprimersi, messaggero di stagionalità e territorio, senza le oppressioni della chimica.  Strategia aziendale e Mission si allineano in 2 etichette (per ora, 5 il prossimo anno), provenienti da uve autonomamente coltivate in biologico, vinificate in modo naturale, senza controllo di temperatura, per mezzo di lieviti indigeni e in assenza filtrazione.
+                <br><br>
+                L’azienda nasce da un progetto di due amici, Alex e Simone, legati da una forte passione per il vino autentico, con l’idea di valorizzare il territorio Umbro e vigne abbandonate.
+                </small>                
+              </main>
+            </div>                
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img class="mb-5" src="./src/app/images/glass.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="parallax2" class="animate__animated animate__fadeIn animate__slow w-100 parallax " data-parallax="scroll" data-image-src="./src/app/images/vigna.jpeg">
+      <div class="container-fluid text-center"><div class="row text-light">
+        
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body py-5">
+              <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                a
+              </button>
+              <h6>Identità</h6>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body py-5">
+              <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                a
+              </button>
+              <h6>Cantina</h6>
+              <small>Attualmente Alfaprivativo, non avendo cantina propria, si appoggia a terzi, seguendo autonomamente coltivazione delle uve, vinificazione e affinamento. Il mercato a cui si affaccia, è quello del consumatore che ricerca territorio e stagionalità nel vino, che vuole in tavola un alimento vivo, espressione della Natura, più che frutto di una elegante miscela Chimica.  Pertanto, Alfaprivativo crede fortemente nel nuovo filone del Vino Naturale, con approccio critico e analitico, senza giustificare difetti o deviazioni, con l’obiettivo di cambiare il pregiudizio sul concetto di Vino Naturale.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body py-5">
+              <button style="width: 60px; height:60px" class="btn  btn-secondary mb-3 rounded rounded-pill">
+                a
+              </button>
+              <h6>Mercato</h6>
+              <small>Globalmente, il mercato del vino naturale è in forte crescita, con un consumatore sempre più attento alla sostenibilità dei processi agricoli/enologici, disposto a mettere in discussioni i dogmi che hanno caratterizzato fino ad oggi tale mercato.</small>
+            </div>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+    <div id="parallax3" class="animate__animated animate__fadeIn animate__slow position-relative w-100 " data-parallax="scroll" data-image-src="./src/app/images/vigna.jpeg">
+     <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
+          <div class="card-body my-5 border-0">
+            <button onclick="action('openVideo')" class="btn">
+              <img src="./src/app/images/icons/play_video.svg" alt="">
+            </button>  
+            <h1>Play video</h1>   
+          </div>
+        </div>   
+    </div>
+    <div id="parallax4" class="position-relative w-100 " data-parallax="scroll" data-image-src="./src/app/images/vitigno2.jpeg">
+      <div class="container-fluid"><div class="row text-light">
+        
+        <div class="d-none d-md-block col-md-4 px-0 position-relative">
+        </div>
+        <div class="col-12 col-md-8 px-0 position-relative">
+        
+        <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+         
+              <h2>Identità</h2>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+            </div>
+          </div>
+        </div>
+
+
+      </div></div>
+    </div>
+    <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark ">
+      <div class="container"><div class="row">
+        <div class="col-12">
+          <div class="card py-4 border-0 bg-transparent text-light text-center">
+            <div class="card-title text-grey">
+              SantaMariaLaNave
+            </div>
+            <div class="card-body">
+              Via Sebastiano Catania, 137 - 95123 Catania (Italia) <br>
+  CF: 04654700873 - REA: CT-310326 <br>
+  Tel.: +39 3472346882 - Email: sonia@santamarialanave.com
+            </div>
+          </div>
+        </div>
+      </div></div>
+    </footer>
+    <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark2 ">
+      <div class="container"><div class="row">
+        <div class="col-12">
+          <div class="card py-4 border-0 bg-transparent text-light text-center d-flex flex-column justify-content-center">
+            <div class="d-flex justify-content-center text-white">
+              <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
+                <span class="fa fa-facebook"></span>
+              </button>
+              <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
+                <span class="fa fa-instagram"></span>
+              </button>
+              <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
+                <span class="fa fa-whatsapp"></span>
+              </button>
+            </div>
+            <small class="small">
+              © 2023 SantaMariaLaNave
+            </small>
+          </div>
+        </div>
+      </div></div>
+    </footer>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="./src/app/parallax.js-1.5.0/parallax.min.js"></script>
+  <script>
+    const menu = document.getElementsByClassName('menu')[0];
+    const menuList = document.getElementById('menuList');
+    const loadingGlass = document.getElementById('loadingGlass');
+    const video = document.getElementById('video');
+    const main = document.getElementById('main');
+
+setTimeout(t=>{
+  loadingGlass.classList.remove('d-none')
+},1500)
+
+setTimeout(t=>{
+  loadingGlass.classList.add('animate__animated')
+  loadingGlass.classList.add('animate__fadeOut')
+},2000)
+
+setTimeout(t=>{
+  action('activateScroll')
+  loadingGlass.classList.add('d-none')
+},2500)
+
+    function action(action) {
+      switch (action) {
+        case 'openVideo': 
+          video.classList.remove('d-none')
+          video.classList.remove('animate__animated')
+          break;
+        case 'closeVideo': 
+          video.classList.add('d-none')
+          video.classList.add('animate__animated')
+          break;
+        case 'closeMenu': 
+          menu.classList.add('d-none')
+          menuList.classList.remove('animate__animated')
+          break;
+        case 'openMenu':
+          menu.classList.remove('d-none')
+          menuList.classList.add('animate__animated')
+          break;
+        case 'activateScroll':
+          document.body.setAttribute('style','overflow-y:auto')
+          break;
+      }
+    }
+    $('#parallax1').parallax({imageSrc: './src/app/images/vitigno.jpeg'});
+    $('#parallax2').parallax({imageSrc: './src/app/images/vigna.jpeg'});
+    $('#parallax3').parallax({imageSrc: './src/app/images/vitigno.jpeg'});
+    $('#parallax4').parallax({imageSrc: './src/app/images/vitigno2.jpeg'});
+  </script>
+</html>
