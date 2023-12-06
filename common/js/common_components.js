@@ -27,7 +27,7 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">CONTATTI</a>
+      <a class="nav-link" href="#footer">CONTATTI</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">EN</a>
@@ -43,7 +43,7 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 `
 
 $('footer')[0].innerHTML = `<div class="container"><div class="row">
-<div class="col-12">
+<div id="footer" class="col-12">
   <div class="card py-4 border-0 bg-transparent text-light text-center">
     <div class="card-title text-grey">
       AlfaPrivativo
@@ -102,7 +102,7 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
       </ul>
     </div>
   <li class="contatti nav-item">
-    <a class="nav-link" href="#"><h2 class="btn-link-primary">CONTATTI</h2></a>
+    <a class="nav-link" href="#footer"><h2 class="btn-link-primary" onclick="action('closeMenu')" >CONTATTI</h2></a>
   </li>
   <li class="en nav-item">
     <a class="nav-link" href="#"><h2 class="btn-link-primary">EN</h2></a>
@@ -121,17 +121,22 @@ const loadingGlass = document.getElementById('loadingGlass');
 const video = document.getElementById('video');
 const main = document.getElementById('main');
 
-loadingGlass.classList.remove('d-none')
+if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.href.indexOf('homepage') == -1) {
+  window.location.href = "../home/homepage.html"
+} else {
+  loadingGlass.classList.remove('d-none')
+}
 
 setTimeout(t=>{
   loadingGlass.classList.add('animate__animated')
   loadingGlass.classList.add('animate__fadeOut')
 },1500)
 
-setTimeout(t=>{
-  action('activateScroll')
-  loadingGlass.classList.add('d-none');
-  showModal();
+setTimeout(t=>{   
+      action('activateScroll')
+      loadingGlass.classList.add('d-none');
+      showCookiesModal();
+      main.classList.add('animate__animated')
 },2000)
 
 $('#parallax1').parallax({imageSrc: `${imagesPath}/vitigno.jpeg`});
@@ -161,9 +166,18 @@ $('.nav-item').on('click',e=>{
   
 })
 
-function showModal() {
+function showCookiesModal() {
   $('button[data-bs-toggle="modal"]').click()
 }
+
+function acceptCookies() {
+  localStorage.setItem('alfaprivativo-cookies-accept','true')
+}
+
+function denyCookies() {
+  localStorage.removeItem('alfaprivativo-cookies-accept')
+}
+
 function applyClasses(kl, elements, exceptions) {
   for (let e of elements) {  
     for (let j of document.getElementsByClassName(e)) {
