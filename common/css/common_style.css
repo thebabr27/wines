@@ -92,22 +92,31 @@
     transform: translateX(0);
     opacity: 1;
   } */
-  #wineTitle {
+  #wineTitle, #wineLabel {
     padding: 40px;
   }
   @media screen and (min-width: 992px) {
     #wineTitle {
       padding: 40px 80px;
     }
+    #wineLabel {
+      padding: 5px;
+    }
   }
   @media screen and (min-width: 1200px) {
     #wineTitle {
       padding: 40px 94px;
     }
+    #wineLabel {
+      padding: 5px;
+    }
   }
   @media screen and (min-width: 1400px) {
     #wineTitle {
       padding: 40px 109px;
+    }
+    #wineLabel {
+      padding: 5px;
     }
   }
 
