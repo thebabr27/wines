@@ -92,6 +92,24 @@
     transform: translateX(0);
     opacity: 1;
   } */
+  #wineTitle {
+    padding: 40px;
+  }
+  @media screen and (min-width: 992px) {
+    #wineTitle {
+      padding: 40px 80px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    #wineTitle {
+      padding: 40px 94px;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    #wineTitle {
+      padding: 40px 109px;
+    }
+  }
 
   @media screen and (min-width: 768px) {
     #parallax2 {
