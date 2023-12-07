@@ -127,15 +127,24 @@ if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.hre
   loadingGlass.classList.remove('d-none')
 }
 
-setTimeout(t=>{
-  loadingGlass.classList.add('animate__animated')
-  loadingGlass.classList.add('animate__fadeOut')
+//localStorage.removeItem('alfaprivativo-cookies-accept')
+setTimeout(t=>{  
+  if (!localStorage.getItem('alfaprivativo-cookies-accept')
+    && window.location.href.indexOf('homepage') == -1) {
+  window.location.href = "../home/homepage.html"
+  } else {
+    loadingGlass.classList.add('animate__animated')
+    loadingGlass.classList.add('animate__fadeOut')
+  }
 },1500)
 
 setTimeout(t=>{   
       action('activateScroll')
       loadingGlass.classList.add('d-none');
-      showCookiesModal();
+      console.log("cookies accepted: ",localStorage.getItem('alfaprivativo-cookies-accept'))
+      if (!localStorage.getItem('alfaprivativo-cookies-accept')) {
+        showCookiesModal();
+      }
       main.classList.add('animate__animated')
 },2000)
 
@@ -172,6 +181,7 @@ function showCookiesModal() {
 
 function acceptCookies() {
   localStorage.setItem('alfaprivativo-cookies-accept','true')
+  console.log("cookies accepted: ",localStorage.getItem('alfaprivativo-cookies-accept'))
 }
 
 function denyCookies() {
