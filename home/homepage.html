@@ -19,139 +19,23 @@
     <title>AlfaPrivativo</title>
   </head>
   <style>
-    
+    .parallax {
+      width: 100vw
+}
   </style>
 
-  <body style="overflow: hidden;">
+  <body onscroll="onScroll(event)" style="overflow: hidden;">
+    
+    <div id="arrowsWrapper" style="height: 80vh;" class="position-absolute w-100 d-flex justify-content-center">
+ 
+  </div>
+  <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
 
-<button class="d-none" data-bs-target="#cookiesModal" data-bs-toggle="modal" style="opacity: 0;"></button>
-<!-- Modal -->
-<div class="modal fade" id="cookiesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body p-0">
- <div class="accordion" id="accordionExample">
-  <div class="card">
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
-      <div class="card-body">
-        Questo sito fa uso di cookie per migliorare l’esperienza di navigazione degli utenti e per raccogliere informazioni sull’utilizzo del sito stesso. Utilizziamo sia cookie tecnici sia cookie di parti terze per inviare messaggi promozionali sulla base dei comportamenti degli utenti. Può conoscere i dettagli consultando la nostra 
-   	<a href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed"><b>Privacy policy.</b></a> Proseguendo nella navigazione si accetta l’uso dei cookie; in caso contrario è possibile abbandonare il sito.
-  </div>
-    </div>
-  </div>
-  <div class="card">
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
-      <div class="card-header bg-white border-0 d-flex justify-content-between">
-        <div style="width:24px"></div>
-      <div class="card-title mt-3 mb-0">
-        <h1 class="ml-1">Privacy Policy</h1>
-      </div>
-        <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#collapseOne"  aria-label="Close"></button>
-      </div>
-      <div class="card-body pt-0 text-center">   
-		<div>
-        <p>
-		<br>
-Informazioni in materia di protezione dei dati personali.
-<br><br>
-Art. 13 Reg. UE 679 del 27 Aprile 2016
-<br><br>
-Ai sensi dell’articolo 13 del “Regolamento Europeo 2016/679 relativo alla protezione delle persone fisiche con riguardo al Trattamento dei Dati Personali, nonché alla libera circolazione di tali dati” (da ora in poi “GDPR”), Il progetto Alfa Privativo è tenuto a fornire agli utenti che si collegano al dominio www.alfaprivativo.org (indipendentemente dagli scopi del collegamento) alcune informazioni relative al trattamento dei dati personali ivi effettuato. Il presente documento, costituisce la “Privacy Policy” (soggetta in futuro ad ogni opportuno aggiornamento) di questo sito. Ai fini della presente informativa, ferme le definizioni tutte di cui all’art. 4 del GDPR si intende per: Dominio alfaprivativo.org: il dominio, raggiungibile attraverso il servizio world wide web della rete internet, all’indirizzo www.alfaprivativo.org, costituito dai dati, dalle applicazioni, dalle risorse tecnologiche, dalle risorse umane, dalle regole organizzative e dalle procedure deputate alla acquisizione, memorizzazione, elaborazione, scambio, ritrovamento e trasmissione delle informazioni.
-<br><br>
-I. AVVERTENZE E PROTEZIONE DEI MINORI<br>
-Chi scrive e pubblica le storie dichiara di aver compiuto la maggior età. Il trattamento dei dati personali farà applicazione dei principi di liceità, correttezza e trasparenza. I dati personali saranno raccolti per finalità determinate, esplicite, legittime (limitazione delle finalità) e saranno adeguati, pertinenti e limitati rispetto alle finalità per le quali sono trattati (minimizzazione dei dati). Saranno sempre aggiornati ed esatti e conservati per un arco di tempo non superiore a quanto necessario per la finalità di dare esecuzione alla pubblicazione del racconto in forma anonima, fatto salvo l’adempimento di obblighi di legge e fiscali che fissino tempi più lunghi di conservazione (limitazione della conservazione). I dati personali verranno trattati adottando tutte le misure di sicurezza adeguate a garantirne l’integrità, la riservatezza e la indisponibilità da parte di terzi non autorizzati (integrità e riservatezza). Qualora non espressamente indicato il conferimento dei dati personali attraverso i punti di raccolta presenti sul sito è riservato ai maggiori di età.
-<br><br>
-II. NORME DI RIFERIMENTO E BASI GIURIDICHE DEL TRATTAMENTO.<br>
-Le operazioni di trattamento, che di seguito ti illustreremo nel dettaglio, hanno il loro
-fondamento giuridico nelle norme che disciplinano il tuo diritto alla protezione dei tuoi dati
-personali, il tuo diritto alla riservatezza, ed infine in quelle che ti permettono di esprimere o di
-revocare, in qualsiasi momento, il tuo consenso informato alle operazioni di trattamento vale
-a dire: Il Regolamento Generale UE 679 del 27 Aprile 2016 relativo alla protezione delle
-persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione
-di tali dati; Il consenso informato, manifestato in conformità con le vigenti disposizioni di
-legge (Art. 6 GDPR). Adempimento di obblighi od ordini cui Il Titolare del Trattamento è
-tenuto in forza di legge o d’ordine dell’Autorità (Art. 6 GDPR).
-<br><br>
-III. – NATURA DEI DATI OGGETTO DI TRATTAMENTO.
-<br><br>
-III.1. – L’INVIO FACOLTATIVO, ESPLICITO E VOLONTARIO DI POSTA ELETTRONICA
-AGLI INDIRIZZI indicati su questo sito comporta la successiva acquisizione dell’indirizzo del mittente, necessario per rispondere alle richieste, nonché degli eventuali altri dati personali inseriti nella missiva. Specifiche informative di sintesi verranno progressivamente riportate o visualizzate nelle pagine del sito predisposte per particolari servizi a richiesta. In ogni caso – ove dalla legge previsto – ti sarà richiesto di volta in volta il consenso al trattamento dei tuoi dati personali. Esclusivamente dopo il tuo consenso, ove necessario, saranno o potranno essere oggetto di trattamento, per le finalità indicate, le seguenti categorie di dati personali che ti riguardano. (a). – Dati personali comuni, dati identificativi. Come ad es. Nome*, Cognome*, Indirizzo di posta elettronica, Numero telefonico, C.A.P. *Facoltativi e con esplicito suggerimento della creazione di un nome di fantasia per garantire l’anonimato dell’autore del racconto selezionato dalla redazione e pubblicato sul sito www.alfaprivativo.org . (b). – Trattamenti tecnici. Costituiscono altresì oggetto di trattamento il numero IP ed il tipo di browser da te utilizzato per la connessione al dominio www.alfaprivativo.org (dati non identificativi), registrati automaticamente dai dispositivi logici di protezione e di controllo degli accessi al dominio (LOG FILES). Tali dati personali saranno utilizzati esclusivamente a fini di controllo del traffico di rete verso il dominio www.alfaprivativo.org Si tratta di informazioni che non sono raccolte per essere associate a interessati identificati, ma che per loro stessa natura potrebbero, attraverso elaborazioni ed associazioni con dati detenuti da terzi, permetterti di identificare gli utenti. Questi dati vengono utilizzati al solo fine di ricavare informazioni statistiche anonime sull’uso del sito e per controllarne il corretto funzionamento e vengono cancellati immediatamente dopo l’elaborazione. I dati potrebbero essere utilizzati per l’accertamento di responsabilità in caso di ipotetici reati informatici ai danni del sito: salva questa eventualità, allo stato, i dati sui contatti web non persistono per più di sette giorni. (c). – Categorie particolari di dati personali. Nel caso in cui attraverso il dominio Alfa Privativo sia effettuata la raccolta di categorie particolari di dati personali ex art. 9 Reg. UE 679/2016, tu sarai preventivamente informato e messo in condizione di esprimere – nei modi di legge – il relativo consenso.
-<br><br>
-IV. – NATURA DEL CONFERIMENTO, FONTI DEI DATI.<br>
-Il conferimento dei tuoi dati personali non è di regola obbligatorio ma, in alcuni casi, risulta necessario, e quindi obbligatorio, per consentirti di beneficiare dei servizi e delle funzionalità proprie del sito.
-<br><br>
-IV.1. – DATI IL CUI CONFERIMENTO È NECESSARIO.
-<br><br>
-IV.1.1. – Il conferimento di taluni dati personali è necessario, e quindi obbligatorio, per dare corso a tue specifiche richieste; tu sei sempre libera/o di non fornire i tuoi dati personali, ma in tal caso potrebbe essere impossibile per il Titolare del trattamento soddisfare le tue richieste, fare fronte alle tue esigenze o farle utilizzare, nella loro interezza, tutte le funzioni disponibili sul sito – Tali dati identificativi saranno trattati sia con supporti cartacei che elettronici, e saranno conservati da Alfa Privativo esclusivamente per il tempo necessario. Trascorsi tali tempi di conservazione, i dati personali identificativi saranno cancellati automaticamente.
-<br><br>
-IV.1.2. – FONTI DEI DATI.<br>
-Raccoglieremo i tuoi dati, da te direttamente, attraverso le tue interazioni con il form del sito
-www.alfaprivativo.org
-<br><br>
-V. FINALITÀ DEL TRATTAMENTO.<br>
-Alfa Privativo, oltre ai trattamenti necessari in relazione ad obblighi di legge, di regolamento, o derivanti da ordine dell’Autorità, effettuerà, esclusivamente con il tuo consenso, se necessario, le operazioni necessarie per consentirti di beneficiare dei servizi e delle funzionalità del sito www.alfaprivativo.org ed i servizi in essi indicati.
-<br><br>
-VI. – MODALITÀ DI TRATTAMENTO DEI TUOI DATI PERSONALI.<br>
-In relazione a tutte le finalità indicate nei paragrafi precedenti il trattamento dei dati avverrà in modo da garantirne la sicurezza logica e fisica e la riservatezza, e potrà essere effettuato attraverso strumenti manuali, informatici e telematici atti a memorizzare, trasmettere e condividere i dati stessi. Le logiche del trattamento saranno strettamente correlate alle finalità perseguite.
-<br><br>
-VI.1. – SICUREZZA E CONSERVAZIONE DEI DATI.<br>
-I tuoi dati personali saranno conservati all’interno dell’Unione Europea, le relative politiche di sicurezza sono revisionate in conformità con le Best Practices in materia.
-<br><br>
-VI.1.2 – PROFILAZIONE, PROCESSO DECISIONALE AUTOMATIZZATO.<br>
-Oltre quanto necessario per consentirci di eseguire le prestazioni che ti consentono di fruire i servizi offerti sul sito, non effettuiamo operazioni di profilazione in relazione ai dati raccolti attraverso questo sito internet.
-<br><br>
-VII. – DESTINATARI DEI DATI E TRASFERIMENTI ALL’ESTERO.
-<br><br>
-VII.1. – RESPONSABILI E INCARICATI DEL TRATTAMENTO DI DATI.<br>
-Possono venire a conoscenza dei dati personali, di cui alla presente informativa, in qualità di Responsabili o Incaricati del trattamento: all’interno di Alfa Privativo, il personale qualificato, ciascuno limitatamente alle proprie competenze e mansioni e sulla base dei compiti assegnati e delle istruzioni impartite. all’esterno di Alfa Privativo soggetti terzi, anch’essi appositamente designati quali Responsabili o incaricati del trattamento – dei quali Alfa Privativo si avvale per servizi vari ed esclusivamente per espletare tali servizi – ciascuno limitatamente alle proprie competenze e mansioni e sulla base dei compiti assegnati e delle istruzioni impartite.
-<br><br>
-VII.2. – TRASFERIMENTO DI DATI PERSONALI ALL’ESTERO.<br>
-Alfa Privativo non trasferisce di propria iniziativa dati personali all’estero. Tuttavia, alcuni soggetti terzi, fornitori di servizi, potrebbero avere i propri server collocati fisicamente all’estero (come nel caso di provider di posta elettronica). In tali eventualità, il trasferimento di dati all’estero avverrà esclusivamente nell’ambito e nel rispetto del Reg. UE 679/2016 Art. 44 ss.
-<br><br>
-VII.3. – DIFFUSIONE (A SOGGETTI ESTERNI INDETERMINATI) DEI DATI.<br>
-In nessun caso i dati personali potranno essere diffusi.
-<br><br>
-VIII. – DIRITTI DELL’INTERESSATO.<br>
-Gli articoli da 15 a 22, GDPR conferiscono agli interessati l’esercizio di specifici diritti. L’art. 15 GDPR riconosce agli interessati il diritto di accedere ai propri dati personali e di ottenerne copia. Il diritto di ottenere copia dei dati non deve ledere i diritti e le libertà altrui. Con la domanda d’accesso, l’interessato ha diritto di ottenere da Alfa Privativo la conferma o meno se sia in corso un trattamento sui propri dati personali e di conoscere le finalità e le categorie di dati trattate, i soggetti terzi cui i dati sono comunicati e se i dati sono trasferiti in un paese extracomunitario con garanzie adeguate. L’interessato ha, altresì, diritto di conoscere il tempo di conservazione dei propri dati personali ed ha il diritto di chiedere la rettifica dei dati inesatti e la integrazione di quelli incompleti, la cancellazione (diritto all’oblio) alle condizioni indicate dall’art. 17, GDPR, la limitazione del trattamento, la revoca del consenso, la portabilità dei dati. I diritti potranno essere esercitati mediante e-mail all’indirizzo info@alfaprivativo.org, oppure mediante posta ordinaria all’indirizzo di seguito indicato. L’interessato che ritenga che il trattamento dei propri dati personali violi le disposizioni del GDPR o della normativa interna in materia di protezione dei dati personali ha diritto di proporre reclamo all’Autorità Garante per la Protezione dei Dati Personali con sede in Roma, ai sensi dell’art. 77 GDPR e/o di adire l’Autorità giudiziaria. Per l’esercizio di tali diritti, o per ottenere qualsiasi altra informazione in merito ad essi e, più in generale, al trattamento dei propri dati personali, le richieste potranno essere rivolte via e-mail al seguente indirizzo: info@alfaprivativo.org; – per posta ordinaria a Alfa Privativo - Santa Croce 791, 30135 Venezia.
-<br><br>
-IX. – REVOCA DEL CONSENSO DOMANDE SULLA PRIVACY ACCESSO E RISCONTRO.<br>
-Se hai domande o desideri avere maggiori informazioni sul trattamento dei tuoi dati personali ovvero esercitare i diritti di cui al precedente n. VI, puoi inviare una e-mail all’amministratore del sito Web Alfa Privativo, scrivendo a info@alfaprivativo.org. Puoi contattarci allo stesso indirizzo anche per avere risposte riguardo alla gestione delle informazioni da parte di Alfa Privativo. Prima che Alfa Privativo possa fornirti o modificare qualsiasi informazione, potrebbe essere necessario verificare la tua identità e rispondere ad alcune domande. Una nostra risposta sarà fornita al più presto.
-<br><br>
-X. – TITOLARE DEL TRATTAMENTO.<br>
-Titolare del trattamento è Alfa Privativo con sede in - Santa Croce 791, 30135 Venezia.
-<br><br>
-XI. – RESPONSABILE PER LA PROTEZIONE DEI DATI PERSONALI.<br>
-Alfa Privativo non ha provveduto alla nomina del Responsabile per la Protezione dei Dati Personali non essendovi tenuta ai sensi di cui all’art. 37 del Reg. UE 679/2016.
-<br><br>
-XI.1. – RESPONSABILI DEL TRATTAMENTO.<br>
-L’elenco completo dei Responsabili del trattamento è disponibile presso la Sede. Le presenti informazioni obbligatorie sono soggette ad aggiornamento, in dipendenza di eventuali mutamenti delle disposizioni di legge applicabili.
-
-</p>
-		</div>
-	  </div>
-    </div>
-  </div>
-</div>
-      <div class="modal-footer">
-        <a role="button" class="btn btn-secondary-outline" href="en\index.html">English Version</a>
-        <a role="accept" data-bs-dismiss="modal" class="btn btn-secondary" href="#" onclick="acceptCookies()">Accetta e continua</a>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-    <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
-    <div class="h-100 w-100 d-flex flex-column  justify-content-center">
-      <div class="d-flex justify-content-center p-5">
-        <div id="glass"></div>
-      </div>
-    </div>
   </div>
     <div class="menu d-none fixed-top animate__animated animate__fadeIn animate__faster " style="z-index:1000; background-color: #C27248; width:100%; height:100vh;">
       
     </div>
-    <div id="navbar" class="w-100 shadow py-3 fixed-top bg-white" style="z-index:500!important">
+    <div id="navbar" class="w-100 nav-transparent py-3 fixed-top" style="z-index:500!important">
      
     </div>
     
@@ -159,6 +43,7 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
   
     
     <div id="main" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../assets/images/logo_lightgrey.svg" alt="">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -167,14 +52,20 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
                 <img style="
                 float: left;
                 margin: 5px;" src="../assets/images/letters/LetterA.svg" alt="">
-                <small style="text-align: justify;">      
-                    lfaPrivativo è un’azienda agricola operante nel Territorio Umbro con l’obiettivo di produrre vini naturali, semplificando i processi agricoli ed enologici, senza perdonarne i difetti. La mission aziendale è quella di portare in bottiglia un concetto di autenticità, dove il vino viene lasciato libero di esprimersi, messaggero di stagionalità e territorio, senza le oppressioni della chimica.
-                </small>                
+                <div style="text-align: justify;">      
+                  lfaPrivativo è un’azienda agricola operante nel Territorio Umbro dove passione per la
+                  terra e rispetto per la natura si sono incontrati nella produzione di vini naturali,
+                  semplificando i processi agricoli ed enologici, senza perdonarne i difetti. La mission
+                  aziendale è quella di portare in bottiglia un concetto di autenticità, dove il vino viene
+                  lasciato libero di esprimersi, messaggero di stagionalità e territorio, senza le oppressioni
+                  della chimica. La raccolta avviene manualmente, selezionando con cura i grappoli
+                  migliori per garantire la massima qualità delle uve.
+                </div>                
               </main>
             </div>                
           </div>
           <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-            <img class="my-5" src="../assets/images/glass.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+            <img class="my-5" src="../assets/images/alex_simone_brindisi.jpeg" style="border-radius: 500px; width: 356px; height: auto" alt="">
           </div>
         </div>
       </div>
@@ -183,7 +74,7 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
     
     <div id="parallax2" class="animate__animated animate__fadeIn animate__slow w-100 parallax " data-parallax="scroll" data-image-src="../assets/images/vigna.jpeg">
       <div class="container-fluid text-center"><div class="row text-light">
-        
+<!--         
         <div class="col-12 col-md-4 px-0 position-relative">
           <div class="w-100 position-absolute bg-dark h-100"></div>
           <div class="card border-0 bg-transparent">
@@ -192,7 +83,7 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
                 <img src="../assets/images/icons/membership.svg" alt="">
               </button>
               <h6>Identità</h6>
-              <small><!-- AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette.  -->L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
             </div>
           </div>
         </div>
@@ -205,7 +96,7 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
                 <img src="../assets/images/icons/wines.svg" alt="">
               </button>
               <h6>Cantina</h6>
-              <small><!-- Attualmente Alfaprivativo, non avendo cantina propria, si appoggia a terzi, seguendo autonomamente coltivazione delle uve, vinificazione e affinamento. Il mercato a cui si affaccia, è quello del consumatore che ricerca territorio e stagionalità nel vino, che vuole in tavola un alimento vivo, espressione della Natura, più che frutto di una elegante miscela Chimica.  Pertanto,  -->Alfaprivativo crede fortemente nel nuovo filone del Vino Naturale, con approccio critico e analitico, senza giustificare difetti o deviazioni, con l’obiettivo di cambiare il pregiudizio sul concetto di Vino Naturale.</small>
+              <small>Attualmente Alfaprivativo, non avendo cantina propria, si appoggia a terzi, seguendo autonomamente coltivazione delle uve, vinificazione e affinamento. Il mercato a cui si affaccia, è quello del consumatore che ricerca territorio e stagionalità nel vino, che vuole in tavola un alimento vivo, espressione della Natura, più che frutto di una elegante miscela Chimica.  Pertanto,  Alfaprivativo crede fortemente nel nuovo filone del Vino Naturale, con approccio critico e analitico, senza giustificare difetti o deviazioni, con l’obiettivo di cambiare il pregiudizio sul concetto di Vino Naturale.</small>
             </div>
           </div>
         </div>
@@ -221,13 +112,85 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
               <small>Globalmente, il mercato del vino naturale è in forte crescita, con un consumatore sempre più attento alla sostenibilità dei processi agricoli/enologici, disposto a mettere in discussioni i dogmi che hanno caratterizzato fino ad oggi tale mercato.</small>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div></div>
     </div>
 
     
     <div id="main2" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../assets/images/logo_lightgrey.svg" alt="">
+      
+      <div class="container">
+        <div class="row kaushan">
+
+  
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../assets/images/icons/wines.svg" alt="">
+                </button>
+                <h6>“Trasparenza e Autenticità”</h6>
+                <small>La trasparenza è il nostro impegno. Vogliamo che ogni consumatore conosca la storia dietro ogni bottiglia, dalle vigne alla cantina. Siamo fieri della nostra autenticità e crediamo che la chiarezza sul nostro processo di produzione contribuisca a creare un legame genuino con chi apprezza i nostri vini.</small>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn  btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../assets/images/icons/market.svg" alt="">
+                </button>
+                <h6>“Artigianalità e Tradizione”</h6>
+                <small>Ogni bottiglia di è il frutto di un'artigianalità meticolosa e di un rispetto profondo per le tradizioni vinicole. Riconosciamo la bellezza della tradizione e la combiniamo con un tocco di innovazione, che ha sempre guidato i nostri percorsi ingegneristici.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../assets/images/icons/membership.svg" alt="">
+                </button>
+                <h6>Sostenibilità Ambientale</h6>
+                <small>Siamo impegnati in pratiche agricole sostenibili e responsabili. Evitiamo l'uso di pesticidi e prodotti chimici, privilegiando soluzioni naturali per la protezione delle nostre vigne.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="parallax4" class="position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vitigno2.jpeg">
+      <div class="container-fluid"><div class="row ">
+        
+        <div class="d-none d-md-block col-md-4 px-0 position-relative">
+        </div>
+        <div class="col-12 col-md-8 px-0 position-relative">
+        
+        <div class="w-100 position-absolute bg-dark h-100"></div>
+         <!--  <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+         
+              <h2>Identità</h2>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+            </div>
+          </div> -->
+        </div>
+
+
+      </div></div>
+    </div>
+
+    
+    <div id="main2" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../assets/images/logo_lightgrey.svg" alt="">
       <div class="container">
         <div class="row">
           
@@ -245,7 +208,7 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
                   lex Calisti e Simone Manci, amici da sempre, abbiamo condiviso i percorsi sportivi, scolastici, 
                   universitari, siamo entrambi Ingegneri meccanici, ma soprattutto abbiamo condiviso tanta vita insieme 
                   incluso l’amore per il vino. Questo amore ci ha portato a fondare Alfaprivativo Società agricola 
-                  Semplice. 
+                  Semplice. <b><a href="../storia/storia.html">Leggi la storia...</a></b>
                 </small>                
               </main>
             </div>                
@@ -253,37 +216,14 @@ L’elenco completo dei Responsabili del trattamento è disponibile presso la Se
         </div>
       </div>
     </div>
-    
-    <div id="parallax4" class="position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vitigno2.jpeg">
-      <div class="container-fluid"><div class="row ">
-        
-        <div class="d-none d-md-block col-md-4 px-0 position-relative">
-        </div>
-        <div class="col-12 col-md-8 px-0 position-relative">
-        
-        <div class="w-100 position-absolute bg-dark h-100"></div>
-          <div class="card border-0 bg-transparent">
-            <div class="card-body p-5">
-         
-              <h2>Identità</h2>
-              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
-            </div>
-          </div>
-        </div>
-
-
-      </div></div>
-    </div>
-
-    <div id="parallax3" class="animate__animated animate__fadeIn animate__slow position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vigna.jpeg">
-      <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
+    <div id="parallax5" class=" position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vitigno2.jpeg">
+      <!-- <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
            <div class="card-body my-5 border-0 text-white">
 
               <iframe id="oriorVideo" class="" style="width: 100%; min-height:400px" src="https://www.youtube.com/embed/COsuulNztFU?si=2KfKBRGl_8UESAfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
            </div>
-         </div>   
+         </div>    -->
      </div>
-     
 
      <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark "></footer>
      
