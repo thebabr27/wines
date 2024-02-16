@@ -133,7 +133,7 @@ if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.hre
 } */
 
 //localStorage.removeItem('alfaprivativo-cookies-accept')
-setTimeout(t=>{  
+/* setTimeout(t=>{  
   if (!localStorage.getItem('alfaprivativo-cookies-accept')
     && window.location.href.indexOf('homepage') == -1) {
   window.location.href = "../home/homepage.html"
@@ -141,7 +141,7 @@ setTimeout(t=>{
     loadingGlass.classList.add('animate__animated')
     loadingGlass.classList.add('animate__fadeOut')
   }
-},2000)
+},2000) */
 
 setTimeout(t=>{   
       action('activateScroll')
