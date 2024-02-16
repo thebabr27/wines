@@ -22,96 +22,183 @@
     
   </style>
 
-  <body style="overflow: hidden;">
-    <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
-    <div class="h-100 w-100 d-flex flex-column  justify-content-center">
-      <div class="d-flex justify-content-center p-5">
-        <div id="glass"></div>
-      </div>
-    </div>
+
+<body onscroll="onScroll(event)" style="overflow: hidden;">
+  <div id="arrowsWrapper" style="height: 80vh;" class="position-absolute w-100 d-flex justify-content-center">
+
+  </div>
+  <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
+
   </div>
     <div class="menu d-none fixed-top animate__animated animate__fadeIn animate__faster " style="z-index:1000; background-color: #C27248; width:100%; height:100vh;">
       
     </div>
-    <div id="navbar" class="w-100 shadow py-3 fixed-top bg-white" style="z-index:500!important">
+    <div id="navbar" class="w-100 nav-transparent py-3 fixed-top" style="z-index:500!important">
      
     </div>
     
     <div id="parallax1" class="animate__animated animate__fadeIn animate__slow parallax w-100 " data-parallax="scroll" ></div>
-  
 
     
-    <div id="main2" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+    <div id="main" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../assets/images/logo_lightgrey.svg" alt="">
       <div class="container">
         <div class="row">
-          
           <div class="col-12 col-md-6">
             <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
               <main class="px-3">
-                <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center">Il nome</h2>
+          <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">
+            Nome</h2>
                 <img style="
                 float: left;
-                margin: 5px;" src="../assets/images/letters/LetterL.svg" alt="">
-                <small style="text-align: justify;">      
-                  ’ Alfa privativo è il prefisso utilizzato nella lingua italiana con il significato di negazione. 
-La scelta del nome è dettata dalla nostra volontà di negare e mettere in discussione l’attuale concetto di 
-vino, sempre più standardizzato ad elegante miscela chimica omologata alle classiche linee di gusto. 
-Inoltre il nome vuole anche evidenziare che entrambi abbiamo “negato” o meglio dire revisionato quello 
-che è stato il nostro percorso di vita fino adesso, quindi dall’ingegneria alla vigna. 
- 
-                </small>                
+                margin: 5px;" src="../assets/images/letters/LetterA.svg" alt="">
+                     
+                  lfa privativo è il prefisso utilizzato nella lingua italiana con il significato di negazione.
+                  La scelta del nome è dettata dalla nostra volontà di negare e mettere in discussione l’attuale
+                  concetto di vino, sempre più standardizzato ad elegante miscela chimica omologata alle
+                  classiche linee di gusto. Inoltre, il nome vuole anche evidenziare che entrambi abbiamo “negato”
+                  o meglio dire revisionato, quello che è stato il nostro percorso di vita fino adesso, sostituendo
+                  tratti di ingegneria con lavoro in vigna e cantina.                           
               </main>
             </div>                
           </div>
-          
-          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-            <img class="my-5" src="../assets/images/alex_simone_brindisi.jpeg" style="border-radius: 500px; width: 356px; height: auto" alt="">
+          <div class="col-12 col-md-6 d-flex  animate__fadeIn animate__slow justify-content-center align-items-center">
+            <img class="my-5" src="../assets/images/vino_libreria.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
           </div>
+        </div>
+      </div>
+    </div>  
+
+    <div id="main2" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4 p-0">
+            <img class="img-thumbnail p-0" src="../assets/images/vitigno_square.png" alt="">
+          </div>
+          <div class="col-4 p-0">
+            <img class="img-thumbnail p-0" src="../assets/images/vigna1_square.png" alt="">
+          </div>
+          <div class="col-4 p-0">
+            <img class="img-thumbnail p-0" src="../assets/images/vitigno2_square.png" alt="">
+          </div>
+     
         </div>
       </div>
     </div>
     
-
-    <div id="parallax" class="animate__animated animate__fadeIn animate__slow position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vigna.jpeg">
-      <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
-           <div class="card-body my-5 border-0"> 
-           </div>
-         </div>   
-     </div>
-    <div id="main" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+    <div id="main3" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+      
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2 margin-top-mobile" src="../assets/images/logo_lightgrey.svg" alt="">
+      
       <div class="container">
+        
         <div class="row">
-          <div class="col-12">
-            <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column">            
+          
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img class="my-5" src="../assets/images/alex_simone_square.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
               <main class="px-3">
-                <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">
-                  Approccio Naturale</h2>
+          <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">
+            Persone</h2>
                 <img style="
                 float: left;
-                margin: 5px;" src="../assets/images/letters/LetterC.svg" alt="">
-                <small style="text-align: justify;">    onsci di un consumatore che va educato e reso consapevole, ma di un mercato sempre più attento alle 
-                  cose genuine, ci siamo chiesti: se andiamo a cercare il pomodoro o la verdura 
-                  Biologica da orti coltivati in assenza di pesticidi/erbicidi ecc, perché non dovremmo apprezzare un vino 
-                  naturale? 
-                  Ma che cos’è un vino Naturale? Per noi il vino è concepito in vigna e in cantina deve solo venire alla luce. 
-                  Chi fa la magia è la vite, che per mesi mette tutta se stessa in quei pochi grappoli. Quale miglior 
-                  riconoscenza la nostra, verso questa generosa pianta, se non assistere alla nascita del vino e alla sua 
-                  naturale maturazione evitando qualunque tipo di intervento atto alla caratterizzazione delle sue qualità? 
-                  Pertanto. NO a: Lieviti Selezionati, controllo di temperatura, filtrazioni, chiarifica, aggiunte di qualsivoglia 
-                  sostanza rettificatrice. 
-                </small>                
+                margin: 5px;" src="../assets/images/letters/LetterA.svg" alt="">
+                <small class="">      
+                  lex e Simone, due amici che fin da piccoli hanno condiviso percorsi sportivi,
+                  accademici e passioni, tra cui quella per la natura e per il vino. Il progetto Alfaprivativo nasce nel
+                  2021, come volontà di portare un concetto di autenticità e passione in bottiglia, ripartendo dalle
+                  tradizioni dei nostri nonni.                </small>                
               </main>
             </div>                
           </div>
         </div>
       </div>
     </div>
+<div id="parallax4" class="animate__animated animate__fadeIn animate__slow parallax w-100 " data-parallax="scroll" ></div>
+    
+<div id="main4" class="animate__animated animate__fadeIn animate__slow w-100 bg-white ">
+  <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../assets/images/logo_lightgrey.svg" alt="">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
+          <main class="px-3">
+      <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">
+        Approccio naturale</h2>
+            <img style="
+            float: left;
+            margin: 5px;" src="../assets/images/letters/LetterC.svg" alt="">
+            <small class="">      
+              he cos’è un vino Naturale? Per noi il vino è concepito in vigna e in
+cantina deve solo venire alla luce. Chi fa la magia è la vite, che per mesi mette tutta se stessa in
+quei pochi grappoli. Quale miglior riconoscenza la nostra, verso questa generosa pianta, se non
+assistere alla nascita del vino e alla sua naturale maturazione evitando qualunque tipo di
+intervento atto alla caratterizzazione delle sue qualità? Pertanto. NO a: Lieviti Selezionati,
+controllo di temperatura, filtrazioni, chiarifica, aggiunte di qualsivoglia sostanza rettificatrice.               </small>                
+          </main>
+        </div>                
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+        <img class="my-5" src="../assets/images/contadini.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+      </div>
+    </div>
+  </div>
+</div>  
 
+<div id="main2" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4 p-0">
+        <img class="img-thumbnail p-0" src="../assets/images/alex_simone_brindisi.jpeg" alt="">
+      </div>
+      <div class="col-4 p-0">
+        <img class="img-thumbnail p-0" src="../assets/images/seduto.png" alt="">
+      </div>
+      <div class="col-4 p-0">
+        <img class="img-thumbnail p-0" src="../assets/images/vino_sole.png" alt="">
+      </div>
+ 
+    </div>
+  </div>
+</div>
 
+<div id="main5" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
+    
+  <img id="logo-grey" class="position-absolute w-100 py-4 px-2 margin-top-mobile" src="../assets/images/logo_lightgrey.svg" alt="">
+      
+  <div class="container">
+    
+    <div class="row">
+      
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+        <img class="my-5" src="../assets/images/contadini2.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
+          <main class="px-3">
+      <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">
+        Territorio e Stagionalità</h2>
+            <img style="
+            float: left;
+            margin: 5px;" src="../assets/images/letters/LetterP.svg" alt="">
+            <small class="">  artner imprescindibili di Alfaprivativo sono Territorio e Stagionalità.
+              Il vino è un frutto della terra, che trova il suo viaggio sensoriale nelle diverse fasi dell’anno. Un
+              calice di vino, non può non essere che un’ode al tempo e alla natura, un racconto della nostra
+              terra.             </small>                
+          </main>
+        </div>                
+      </div>
+    </div>
+  </div>
+</div>
 
-     <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark "></footer>
-     
-     <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark2 "></footer>
+<div id="parallax5" class="animate__animated animate__fadeIn animate__slow parallax w-100 " data-parallax="scroll" ></div>
+    
+    <footer style="margin-top: -100px;" class="animate__animated animate__fadeIn animate__slow w-100 bg-dark "></footer>
+    
+    <footer class="animate__animated animate__fadeIn animate__slow w-100 bg-dark2 "></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
