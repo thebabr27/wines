@@ -1,10 +1,20 @@
 
 imagesPath = '../assets/images'
 
+/* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
+<img id="arrows" class="d-none" style="height: 60px;" src="../assets/images/arrows.svg" alt="">
+</div>` */
+
+$('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  justify-content-center">
+  <div class="d-flex justify-content-center p-5">
+    <div id="glass"></div>
+  </div>
+</div>`
+
 $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 <div class="col-12 d-flex justify-content-between">
-  <a class="px-3 py-1" href="../home/homepage.html" >
-    <img height="40px" src="${imagesPath}/logo.png" alt="">
+  <a class="navbar-brand px-3 py-1" href="../home/homepage.html" >
+    <img height="60px" src="${imagesPath}/logo.svg" alt="">
   </a>  
 
   <ul class="d-none d-md-flex align-items-center nav">
@@ -13,9 +23,6 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
     </li>
     <li class="nav-item">
       <a class="nav-link" href="../storia/storia.html">LA STORIA</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="../vigneti/vigneti.html">VIGNETI</a>
     </li>
     <li id="viniDropdown" class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,8 +41,8 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
     </li>
   </ul> 
     <div class=" d-flex d-md-none flex-column justify-content-center">
-      <a onclick="action('openMenu')" class="btn d-flex flex-column justify-content-center">
-        <img src="${imagesPath}/icons/hamburger.svg" alt="">
+      <a onclick="action('openMenu')" class="hamburger btn d-flex flex-column justify-content-center">
+        <img src="${imagesPath}/icons/hamburger_white.svg" alt="">
       </a>  
     </div>
   </div>
@@ -45,13 +52,14 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 $('footer')[0].innerHTML = `<div class="container"><div class="row">
 <div id="footer" class="col-12">
   <div class="card py-4 border-0 bg-transparent text-light text-center">
+  <img height="90px" src="../assets/images/logo.svg">
     <div class="card-title text-grey">
-      AlfaPrivativo
+      Alfaprivativo Società Agricola Semplice
     </div>
     <div class="card-body">
-      Via Bla Bla (Italia) <br>
-PI: 0000000000000 <br>
-Tel.: +39 3210987654 - Email: mail@mail.com
+    - Indirizzo: Fraz. Morano Osteria 125/A <br>- Località: Gualdo Tadino (PG) - Cap: 06023  <br>
+- PI: 03881990547 <br>- 
+Tel. Simone: +39 3387802485 <br>- Alex: +39 3493177129 <br>- Email: alfaprivativowines@libero.it
     </div>
   </div>
 </div>
@@ -65,14 +73,14 @@ $('footer')[1].innerHTML = ` <div class="container"><div class="row">
         <span class="fa fa-facebook"></span>
       </button>-->
       <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
-        <span class="fa fa-instagram"></span>
+        <a target="_blank" href="https://www.instagram.com/alfaprivativo_naturalwines/"><span class="fa fa-instagram"></span></a>
       </button>
       <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
-        <span class="fa fa-whatsapp"></span>
+        <a target="_blank" href="https://wa.me/+393493177129/?text=Buongiorno%20sono%20interessato%20ai%20vostri%20prodotti"><span class="fa fa-whatsapp"></span></a>
       </button>
     </div>
     <small class="small">
-      © 2023 AlfaPrivativo
+      © 2024 AlfaPrivativo
     </small>
   </div>
 </div>
@@ -88,9 +96,6 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
   </li>
   <li class="storia nav-item">
     <a class="nav-link" href="../storia/storia.html"><h2 class="btn-link-primary">LA STORIA</h2></a>
-  </li>
-  <li class="storia nav-item">
-    <a class="nav-link" href="../vigneti/vigneti.html"><h2 class="btn-link-primary">VIGNETI</h2></a>
   </li>
   <li class="collapse-vini nav-item" data-bs-toggle="collapse" data-bs-target="#collapseVini" >
     <a class="nav-link" href="#"><h2 class="btn-link-primary">VINI</h2></a>
@@ -120,12 +125,12 @@ const menuList = document.getElementById('menuList');
 const loadingGlass = document.getElementById('loadingGlass');
 const video = document.getElementById('video');
 const main = document.getElementById('main');
-
+/* 
 if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.href.indexOf('homepage') == -1) {
   window.location.href = "../home/homepage.html"
 } else {
   loadingGlass.classList.remove('d-none')
-}
+} */
 
 //localStorage.removeItem('alfaprivativo-cookies-accept')
 setTimeout(t=>{  
@@ -136,7 +141,7 @@ setTimeout(t=>{
     loadingGlass.classList.add('animate__animated')
     loadingGlass.classList.add('animate__fadeOut')
   }
-},1500)
+},2000)
 
 setTimeout(t=>{   
       action('activateScroll')
@@ -146,13 +151,13 @@ setTimeout(t=>{
         showCookiesModal();
       }
       main.classList.add('animate__animated')
-},2000)
+},2500)
 
-$('#parallax1').parallax({imageSrc: `${imagesPath}/vitigno.jpeg`});
+$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vitigno.jpeg`});
 $('#parallax2').parallax({imageSrc: `${imagesPath}/vigna.jpeg`});
-$('#parallax3').parallax({imageSrc: `${imagesPath}/vitigno.jpeg`});
+$('#parallax3').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
 $('#parallax4').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
-$('#parallax5').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
+$('#parallax5').parallax({imageSrc: `${imagesPath}/vigna2.jpg`});
 const menuItems = [
   'home','storia','collapse-rosso','rosso',
   'collapse-bianco','bianco',
@@ -174,6 +179,11 @@ $('.nav-item').on('click',e=>{
   }
   
 })
+
+/* START *//* 
+setTimeout(t=>{
+  moveArrows()
+},2000) */
 
 function showCookiesModal() {
   $('button[data-bs-toggle="modal"]').click()
@@ -234,7 +244,15 @@ function action(action) {
       break;
   }
 }
-    function reveal() {
+
+/* function moveArrows() {
+  if ($('html')[0].scrollTop < 1) {
+    setTimeout(
+      t=>{$('#arrows')[0].classList.remove('d-none')
+    },2000)
+  }
+} */
+function reveal() {
       var allReveals = [
         document.querySelectorAll(".reveal"),
         document.querySelectorAll(".revealSlideIn")
@@ -254,4 +272,29 @@ function action(action) {
         } 
       }
 
+    }
+
+    function onScroll(e) {
+      /* console.log($('html')[0].scrollTop) */
+      if ($('html')[0].scrollTop < 50) {
+        $('#navbar')[0].classList.remove('bg-white')
+        $('#navbar')[0].classList.add('nav-transparent')
+        $('#navbar')[0].classList.remove('shadow')
+        $('#navbar')[0].classList.add('nav-transparent')
+        $('.hamburger img').attr('src', '../assets/images/icons/hamburger_white.svg')
+        /* moveArrows() */
+        
+      } else {
+        let classes = [];
+        for ( let klass of $('#navbar')[0].classList) {
+          classes.push(klass)
+        }
+        if ( classes.indexOf('bg-white') < 0 ) {
+          $('#navbar')[0].classList.add('bg-white')
+          $('#navbar')[0].classList.add('shadow')
+          $('#navbar')[0].classList.remove('nav-transparent')
+          $('.hamburger img').attr('src', '../assets/images/icons/hamburger.svg')
+          /* $('#arrows')[0].classList.add('d-none') */
+        }
+      }
     }
