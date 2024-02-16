@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 @keyframes glassAnimation {
     0%   {background-image: url('../../assets/images/animations/glass/Frame_11.svg');}
     7.69%   {background-image: url('../../assets/images/animations/glass/Frame_22.svg');}
@@ -15,6 +17,14 @@
     92.30%   {background-image: url('../../assets/images/animations/glass/Frame_11.svg');}
     100.00%   {background-image: url('../../assets/images/animations/glass/Frame_11.svg');}
   }
+  
+@keyframes arrowsAnimation {
+  0% {transform: translateY(10px)}
+  50% {transform: translateY(0px)}
+}
+.kaushan {
+  font-family: 'Kaushan Script', cursive;
+}
   .btn-secondary {
     background-color: #C46F48;
     transition: .2s;
@@ -32,9 +42,9 @@
     border: 1px solid #DDD;
   }
   .parallax {
-        min-height: 500px;
-        background: transparent;
-    }
+      height: 600px;
+      background: transparent;
+  }
   .text-grey {
     color:grey!important;
   }
@@ -50,14 +60,16 @@
     font-size: 12px;
     color: #000000;
   }
-  .position-relative .bg-dark {
+  /* .position-relative .bg-dark {
     transition: .5s;
     opacity: 0;
-  }
-  .position-relative:hover .bg-dark {
-    opacity: .4;
+  } */
+  .card-body  {
     transition: .5s;
-    color: #FFFFFF;
+  }
+  .increase-text:hover .card-body  {
+    transform: scale(1.2);
+    transition: .5s;
   }
   .half-pic {
     width: 100%;
@@ -65,6 +77,36 @@
     padding-top:20px;
     padding-bottom:20px;
 
+  }
+  .parallax div {
+    height: 100vh;
+  }
+  .nav-link {
+    transition: .3s;
+  }
+  #navbar {
+    transition: .3s;
+    box-shadow: none;
+    font-size: 12px!important;
+  }
+  .nav-transparent .nav-link {
+    font-size: 18px!important;
+    color: white;
+  }
+  .navbar-brand img, .hamburger {
+    transition: .3s;
+  }
+  .nav-transparent .navbar-brand img {
+    height: 80px;
+  }
+  .nav-transparent .hamburger {
+    transform: scale(1.2);
+  }
+  #parallax2, #parallax3 {
+    height: 450px;
+  }
+  #parallax4, #parallax5 {
+    height: 250px;
   }
   /* 
 
@@ -95,12 +137,20 @@
   #wineTitle, #wineLabel {
     padding: 40px;
   }
+
+  #logo-grey {
+    z-index: -1; 
+    max-height: 450px;
+  }
   @media screen and (min-width: 992px) {
     #wineTitle {
       padding: 40px 80px;
     }
     #wineLabel {
       padding: 5px;
+    }
+    #logo-grey {
+      margin-top: 0;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -124,6 +174,9 @@
     #parallax2 {
       margin-bottom: -5vw;
     }
+    #logo-grey {
+      margin-top: 100px!important;
+    }
   }
 
   @media screen and (min-width: 808px) {
@@ -143,6 +196,10 @@
       margin-bottom: -15vw;
     }
   }
+
+  .margin-top-mobile {
+    margin-top: 400px;
+  }
   @media screen and (max-width: 768px) {
     
     .position-relative .row {
@@ -151,30 +208,30 @@
       transition: .5s;
 
     }
-    .position-relative:hover .row,
+    /* .position-relative:hover .row,
     .position-relative:focus .row {
       color: #FFF;
       opacity: 1;
-    }
-    .position-relative .bg-dark {
+    } */
+    /* .position-relative .bg-dark {
       opacity: .4;
       transition: .5s;
       color: #FFFFFF;
-    }
+    } */
   }
-  .position-relative:hover .btn-secondary, #parallax3 .btn:hover {
+  /* .position-relative:hover .btn-secondary, #parallax3 .btn:hover {
     box-shadow: 0px 2px 20px 0px #FFF;
-  }
+  } */
   .position-relative h6{
     font-weight: 600;
   } 
   .position-relative small {
     font-weight: 400;
   } 
-  .position-relative:hover h6,.position-relative:hover h2,.position-relative:hover small {
+  /* .position-relative:hover h6,.position-relative:hover h2,.position-relative:hover small {
     color: #FFF!important;
     transition: .5s;
-  } 
+  }  */
   #parallax2 small, #parallax2 h6 {
     color: #DDD;
     transition: .5s;
@@ -183,6 +240,10 @@
     width: -webkit-fill-available;
   }
   
+  #arrows {
+    opacity: .7;
+    animation: arrowsAnimation .5s infinite;
+  }
 
   #glass {
     width: 300px;
