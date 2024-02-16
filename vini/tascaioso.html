@@ -22,18 +22,18 @@
     
   </style>
 
-  <body style="overflow: hidden;">
-    <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
-    <div class="h-100 w-100 d-flex flex-column  justify-content-center">
-      <div class="d-flex justify-content-center p-5">
-        <div id="glass"></div>
-      </div>
-    </div>
+
+<body onscroll="onScroll(event)" style="overflow: hidden;">
+  <div id="arrowsWrapper" style="height: 80vh;" class="position-absolute w-100 d-flex justify-content-center">
+
+  </div>
+  <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
+
   </div>
     <div class="menu d-none fixed-top animate__animated animate__fadeIn animate__faster " style="z-index:1000; background-color: #C27248; width:100%; height:100vh;">
       
     </div>
-    <div id="navbar" class="w-100 shadow py-3 fixed-top bg-white" style="z-index:500!important">
+    <div id="navbar" class="w-100 nav-transparent py-3 fixed-top" style="z-index:500!important">
      
     </div>
     
@@ -74,7 +74,7 @@
             </div>                
           </div>
           
-          <div class="py-3 col-12 col-md-6 col-lg-12">
+          <!-- <div class="py-3 col-12 col-md-6 col-lg-12">
               <div id="wineLabel"  class="d-flex justify-content-center w-100">
           
               <div class="col-12 col-lg-10">
@@ -83,24 +83,20 @@
               </div>
       
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 
     <div id="parallax3" class="animate__animated animate__fadeIn animate__slow position-relative w-100 " data-parallax="scroll" data-image-src="../assets/images/vigna.jpeg">
-      <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
+      <!-- <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
            <div class="card-body mt-3 mb-5 border-0 text-white">
-            <!-- <div  onclick="this.classList.add('d-none'); document.getElementById('oriorVideo').classList.remove('d-none'); "; >
-              
-             <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
-               <img src="../assets/images/icons/play.svg" alt="">
-             </button> -->
+     
              <h1>Video degustazione</h1> 
              <hr> 
              <iframe id="tascaiosoVideo" style="width: 100%; min-height:400px" src="https://www.youtube.com/embed/SEe3mZR71wQ?si=UWRfES2Fj7Lm81pR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
            </div>
-         </div>   
+         </div>    -->
      </div>
 
      <div id="main2" class="animate__animated animate__fadeIn animate__sloww-100 bg-white ">
