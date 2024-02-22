@@ -22,6 +22,26 @@
   0% {transform: translateY(10px)}
   50% {transform: translateY(0px)}
 }
+
+@keyframes slideInRight {
+  0% {transform: translateX(100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes slideInLeft {
+  0% {transform: translateX(-100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes slideInDown {
+  0% {transform: translateY(100px)}
+  100% {transform: translateY(0)}
+}
+
+@keyframes slideInUp {
+  0% {transform: translateY(-100px)}
+  100% {transform: translateY(0)}
+}
 .kaushan {
   font-family: 'Kaushan Script', cursive;
 }
@@ -89,9 +109,18 @@
     box-shadow: none;
     font-size: 12px!important;
   }
+
+  .nav-transparent .col-12 {
+    background-color: rgba(0,0,0,0.2)!important;
+    border-radius: 15px;
+  }
   .nav-transparent .nav-link {
     font-size: 18px!important;
     color: white;
+  }
+  .d-not {
+    opacity: 0;
+    transition:.5s;
   }
   .navbar-brand img, .hamburger {
     transition: .3s;
@@ -107,6 +136,25 @@
   }
   #parallax4, #parallax5 {
     height: 250px;
+  }
+  .opacity {
+    opacity: 0;
+    transition: 1s;
+  }
+  .img-thumbnail {
+    border-radius: 0;
+    border: none;
+  }
+  .text-bold a {
+    font-weight:400!important;
+  }
+  .reveal {
+    opacity: 0;
+    transition: 1s;
+  }
+  .reveal.animate__animated {
+    opacity: 1;
+    transition: 1s;
   }
   /* 
 
@@ -139,7 +187,7 @@
   }
 
   #logo-grey {
-    z-index: -1; 
+    z-index: 0; 
     max-height: 450px;
   }
   @media screen and (min-width: 992px) {

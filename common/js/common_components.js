@@ -1,5 +1,18 @@
+/* imagesPath = '../assets/images';
+homePath = '../home/homepage.html'
+storyPath = '../storia/storia.html'
+winesPath = '../vini/'*/
 
-imagesPath = '../assets/images'
+imagesPath = '../../../assets/images';
+if (window.location.href.indexOf("en/") < 0) { 
+  homePath = '../../../home/homepage.html'
+  storyPath = '../../../storia/storia.html'
+  winesPath = '../../../vini/'
+} else {
+  homePath = '../home/homepage.html'
+  storyPath = '../storia/storia.html'
+  winesPath = '../vini/'
+}
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
 <img id="arrows" class="d-none" style="height: 60px;" src="../assets/images/arrows.svg" alt="">
@@ -11,33 +24,41 @@ $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  j
   </div>
 </div>`
 
+if (window.location.href.indexOf("en/") < 0) { 
+  langLink = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"> EN </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
+} else {
+  langLink = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"> IT </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
+}
 $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 <div class="col-12 d-flex justify-content-between">
   <a class="navbar-brand px-3 py-1" href="../home/homepage.html" >
     <img height="60px" src="${imagesPath}/logo.svg" alt="">
   </a>  
 
-  <ul class="d-none d-md-flex align-items-center nav">
+  <ul class="d-none d-md-flex align-items-center nav text-bold   ">
     <li class="nav-item">
-      <a class="nav-link" href="../home/homepage.html">HOME</a>
+      <a class="nav-link" href="${homePath}">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../storia/storia.html">LA STORIA</a>
+      <a class="nav-link" href="${storyPath}">LA STORIA</a>
     </li>
     <li id="viniDropdown" class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         VINI
       </a>
       <ul style="padding-top:12px" class="dropdown-menu animate__fadeInDown animate__animated animate__faster" aria-labelledby="navbarDropdown">
-        <li style="margin-top:-5px"><a class="dropdown-item" href="../vini/tascaioso.html">Tascaioso</a></li>
-        <li style="margin-top:-5px"><a class="dropdown-item" href="../vini/orior.html">Orior</a></li>
+        <li style="margin-top:-5px"><a class="dropdown-item" href="${winesPath}tascaioso.html">Tascaioso</a></li>
+        <li style="margin-top:-5px"><a class="dropdown-item" href="${winesPath}orior.html">Orior</a></li>
+        <li style="margin-top:-5px"><a class="dropdown-item" href="${winesPath}arpensato.html">Arpensato</a></li>
       </ul>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#footer">CONTATTI</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">EN</a>
+      ${langLink}
     </li>
   </ul> 
     <div class=" d-flex d-md-none flex-column justify-content-center">
@@ -52,7 +73,7 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 $('footer')[0].innerHTML = `<div class="container"><div class="row">
 <div id="footer" class="col-12">
   <div class="card py-4 border-0 bg-transparent text-light text-center">
-  <img height="90px" src="../assets/images/logo.svg">
+  <img height="90px" src="${imagesPath}/logo.svg">
     <div class="card-title text-grey">
       Alfaprivativo Società Agricola Semplice
     </div>
@@ -92,25 +113,26 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
 </a>
 <ul id="menuList" class="accordion bg-transparent animate__animated animate__fast nav d-flex flex-column text-center animate__fadeInUp" style="font-size:xx-large;">
   <li class="home nav-item">
-    <a class="nav-link" href="../home/homepage.html"><h2 class="btn-link-dark">HOME</h2></a>
+    <a class="nav-link" href="${homePath}"><h2 class="btn-link-dark">HOME</h2></a>
   </li>
   <li class="storia nav-item">
-    <a class="nav-link" href="../storia/storia.html"><h2 class="btn-link-primary">LA STORIA</h2></a>
+    <a class="nav-link" href="${storyPath}"><h2 class="btn-link-primary">LA STORIA</h2></a>
   </li>
   <li class="collapse-vini nav-item" data-bs-toggle="collapse" data-bs-target="#collapseVini" >
     <a class="nav-link" href="#"><h2 class="btn-link-primary">VINI</h2></a>
   </li>
     <div id="collapseVini" class="accordion-collapse collapse" data-bs-parent="#menuList">   
       <ul class="nav d-flex flex-column text-center">
-        <li class="vini nav-item"><a class="nav-link" href="../vini/tascaioso.html">Tascaioso</a></li>
-        <li class="vini nav-item"><a class="nav-link" href="../vini/orior.html">Orior</a></li>
+        <li class="vini nav-item"><a class="nav-link" href="${winesPath}tascaioso.html">Tascaioso</a></li>
+        <li class="vini nav-item"><a class="nav-link" href="${winesPath}orior.html">Orior</a></li>
+        <li class="vini nav-item"><a class="nav-link" href="${winesPath}arpensato.html">Arpensato</a></li>
       </ul>
     </div>
   <li class="contatti nav-item">
     <a class="nav-link" href="#footer"><h2 class="btn-link-primary" onclick="action('closeMenu')" >CONTATTI</h2></a>
   </li>
   <li class="en nav-item">
-    <a class="nav-link" href="#"><h2 class="btn-link-primary">EN</h2></a>
+    ${langLink2}
   </li>
 </ul> 
 <div class="p-3"></div>
@@ -118,7 +140,6 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
 
 
 
-window.scrollTo(0,0);
 
 const menu = document.getElementsByClassName('menu')[0];
 const menuList = document.getElementById('menuList');
@@ -133,31 +154,34 @@ if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.hre
 } */
 
 //localStorage.removeItem('alfaprivativo-cookies-accept')
-/* setTimeout(t=>{  
-  if (!localStorage.getItem('alfaprivativo-cookies-accept')
+window.scrollTo(0,0);
+setTimeout(t=>{  
+ /*  if (!localStorage.getItem('alfaprivativo-cookies-accept')
     && window.location.href.indexOf('homepage') == -1) {
   window.location.href = "../home/homepage.html"
-  } else {
+  } else {*/
+window.scrollTo(0,0);
     loadingGlass.classList.add('animate__animated')
     loadingGlass.classList.add('animate__fadeOut')
-  }
-},2000) */
-
+  /*}*/
+},2000) 
 setTimeout(t=>{   
       action('activateScroll')
-      loadingGlass.classList.add('d-none');
+      loadingGlass.classList.add('animate__animated');
+      
       console.log("cookies accepted: ",localStorage.getItem('alfaprivativo-cookies-accept'))
       if (!localStorage.getItem('alfaprivativo-cookies-accept')) {
         showCookiesModal();
       }
       main.classList.add('animate__animated')
+      loadingGlass.remove()
 },2500)
 
-$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vitigno.jpeg`});
+$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vigna5.jpg`});
 $('#parallax2').parallax({imageSrc: `${imagesPath}/vigna.jpeg`});
 $('#parallax3').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
 $('#parallax4').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
-$('#parallax5').parallax({imageSrc: `${imagesPath}/vigna2.jpg`});
+$('#parallax5').parallax({imageSrc: `${imagesPath}/vitigno.jpeg`});
 const menuItems = [
   'home','storia','collapse-rosso','rosso',
   'collapse-bianco','bianco',
@@ -255,19 +279,21 @@ function action(action) {
 function reveal() {
       var allReveals = [
         document.querySelectorAll(".reveal"),
-        document.querySelectorAll(".revealSlideIn")
       ];
       
       for (let reveals of allReveals) {
         for (var i = 0; i < reveals.length; i++) {
           var windowHeight = window.innerHeight;
           var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-      
+          var elementVisible = 100;
+          var animation = "";
+          animation = (reveals[i].classList.value.split('reveal')[2].split(" ")[0])
           if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+            reveals[i].classList.add("animate__animated");
+            reveals[i].classList.add("animate__"+ animation);
           } else {
-            reveals[i].classList.remove("active");
+            reveals[i].classList.remove("animate__animated");
+            reveals[i].classList.remove("animate__"+ animation);
           }
         } 
       }
@@ -275,13 +301,21 @@ function reveal() {
     }
 
     function onScroll(e) {
-      /* console.log($('html')[0].scrollTop) */
+      reveal();
+      if ($('html')[0].scrollTop > 11) {/* 
+        $('#wineTitle')[0].classList.remove("d-not")
+        $('#wineTitle')[0].classList.add("animate__fadeInUp")
+        setTimeout(t=>{
+          $('#wineTitle')[0].classList.remove("animate__fadeInUp")
+        },2000) */
+      }
       if ($('html')[0].scrollTop < 50) {
+        
         $('#navbar')[0].classList.remove('bg-white')
         $('#navbar')[0].classList.add('nav-transparent')
         $('#navbar')[0].classList.remove('shadow')
         $('#navbar')[0].classList.add('nav-transparent')
-        $('.hamburger img').attr('src', '../assets/images/icons/hamburger_white.svg')
+        $('.hamburger img').attr('src', `${imagesPath}/icons/hamburger_white.svg`)
         /* moveArrows() */
         
       } else {
@@ -293,7 +327,7 @@ function reveal() {
           $('#navbar')[0].classList.add('bg-white')
           $('#navbar')[0].classList.add('shadow')
           $('#navbar')[0].classList.remove('nav-transparent')
-          $('.hamburger img').attr('src', '../assets/images/icons/hamburger.svg')
+          $('.hamburger img').attr('src', `${imagesPath}/icons/hamburger.svg`)
           /* $('#arrows')[0].classList.add('d-none') */
         }
       }
