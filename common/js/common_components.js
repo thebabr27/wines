@@ -25,11 +25,11 @@ $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  j
 </div>`
 
 if (window.location.href.indexOf("en/") < 0) { 
-  langLink = `<a class="nav-link" href="${window.location.href.split('github.io')[0]}github.io/en${window.location.href.split('github.io')[1]}"> EN </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io')[0]}github.io/en${window.location.href.split('github.io')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split('github.io/wines')[0]}github.io/en${window.location.href.split('github.io/wines')[1]}"> EN </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io/wines')[0]}github.io/en${window.location.href.split('github.io/wines')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
 } else {
-  langLink = `<a class="nav-link" href="${window.location.href.split('github.io/en')[0]}github.io${window.location.href.split('github.io/en')[1]}"> IT </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io/en')[0]}github.io${window.location.href.split('github.io/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split('github.io/wines/en')[0]}github.io${window.location.href.split('github.io/wines/en')[1]}"> IT </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io/wines/en')[0]}github.io${window.location.href.split('github.io/wines/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
 }
 $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 <div class="col-12 d-flex justify-content-between">
