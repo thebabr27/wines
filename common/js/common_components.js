@@ -302,7 +302,7 @@ function reveal() {
 
     function onScroll(e) {
       reveal();
-      if ($('html')[0].scrollTop > 11) {/* 
+      if ($('html')[0].scrollTop > 51) {/* 
         $('#wineTitle')[0].classList.remove("d-not")
         $('#wineTitle')[0].classList.add("animate__fadeInUp")
         setTimeout(t=>{
