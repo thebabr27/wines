@@ -1,21 +1,21 @@
-/* imagesPath = '../assets/images';
-homePath = '../home/homepage.html'
-storyPath = '../storia/storia.html'
-winesPath = '../vini/'*/
+/* imagesPath = '../wines/assets/images';
+homePath = '../wines/home/homepage.html'
+storyPath = '../wines/storia/storia.html'
+winesPath = '../wines/vini/'*/
 
-imagesPath = '../../../assets/images';
+imagesPath = '../../../wines/assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
-  homePath = '../../../home/homepage.html'
-  storyPath = '../../../storia/storia.html'
-  winesPath = '../../../vini/'
+  homePath = '../../../wines/home/homepage.html'
+  storyPath = '../../../wines/storia/storia.html'
+  winesPath = '../../../wines/vini/'
 } else {
-  homePath = '../home/homepage.html'
-  storyPath = '../storia/storia.html'
-  winesPath = '../vini/'
+  homePath = '../wines/home/homepage.html'
+  storyPath = '../wines/storia/storia.html'
+  winesPath = '../wines/vini/'
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
-<img id="arrows" class="d-none" style="height: 60px;" src="../assets/images/arrows.svg" alt="">
+<img id="arrows" class="d-none" style="height: 60px;" src="../wines/assets/images/arrows.svg" alt="">
 </div>` */
 
 $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  justify-content-center">
