@@ -134,7 +134,7 @@
   #parallax2, #parallax3 {
     height: 450px;
   }
-  #parallax4, #parallax5 {
+  #parallax4, #parallax5, #parallax6 {
     height: 250px;
   }
   .opacity {
@@ -186,7 +186,7 @@
     padding: 40px;
   }
   .wine-bottle {
-    margin-left: 0; margin-top: -25%; z-index: 500;
+    margin-left: 0; margin-top: -14vh; z-index: 500;
   }
 
   #logo-grey {
@@ -213,7 +213,7 @@
       margin-top: 100px!important;
     }
     .wine-bottle {
-      margin-left: 40%;
+      margin-left: 45%;
     }
   }
 
@@ -222,7 +222,7 @@
       margin-bottom: -10vw;
     }
     .wine-bottle {
-      margin-left: 35%;
+      margin-left: 40%;
     }
   }
 
@@ -231,14 +231,14 @@
       margin-bottom: -13vw;
     }
     .wine-bottle {
-      margin-left: 35%;
+      margin-left: 40%;
     }
   }
 
   @media screen and (min-width: 990px) {
 
     .wine-bottle {
-      margin-left: 50%;
+      margin-left: 60%;
     }
   }
 
@@ -247,7 +247,7 @@
       margin-bottom: -15vw;
     }
     .wine-bottle {
-      margin-left: 45%;
+      margin-left: 50%;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -275,6 +275,10 @@
 
   .margin-top-mobile {
     margin-top: 400px;
+  }
+  .bottle  {
+    width: 300px; 
+    height: max-content;
   }
 
   @media screen and (max-width: 768px) {
