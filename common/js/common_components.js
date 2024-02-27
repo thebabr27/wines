@@ -94,10 +94,10 @@ $('footer')[1].innerHTML = ` <div class="container"><div class="row">
         <span class="fa fa-facebook"></span>
       </button>-->
       <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
-        <a target="_blank" href="https://www.instagram.com/alfaprivativo_naturalwines/"><span class="fa fa-instagram"></span></a>
+        <a target="_blank" href="https://www.instagram.com/alfaprivativo_naturalwines/"><span class="bi bi-instagram"></span></a>
       </button>
       <button style="min-width: 38px;" class="btn btn-light rounded rounded-pill m-2">
-        <a target="_blank" href="https://wa.me/+393493177129/?text=Buongiorno%20sono%20interessato%20ai%20vostri%20prodotti"><span class="fa fa-whatsapp"></span></a>
+        <a target="_blank" href="https://wa.me/+393493177129/?text=Buongiorno%20sono%20interessato%20ai%20vostri%20prodotti"><span class="bi bi-whatsapp"></span></a>
       </button>
     </div>
     <small class="small">
