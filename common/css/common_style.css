@@ -185,6 +185,9 @@
   #wineTitle, #wineLabel {
     padding: 40px;
   }
+  .wine-bottle {
+    margin-left: 0; margin-top: -25%; z-index: 500;
+  }
 
   #logo-grey {
     z-index: 0; 
@@ -201,12 +204,61 @@
       margin-top: 0;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    #parallax2 {
+      margin-bottom: -5vw;
+    }
+    #logo-grey {
+      margin-top: 100px!important;
+    }
+    .wine-bottle {
+      margin-left: 40%;
+    }
+  }
+
+  @media screen and (min-width: 808px) {
+    #parallax2 {
+      margin-bottom: -10vw;
+    }
+    .wine-bottle {
+      margin-left: 35%;
+    }
+  }
+
+  @media screen and (min-width: 912px) {
+    #parallax2 {
+      margin-bottom: -13vw;
+    }
+    .wine-bottle {
+      margin-left: 35%;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+
+    .wine-bottle {
+      margin-left: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1062px) {
+    #parallax2 {
+      margin-bottom: -15vw;
+    }
+    .wine-bottle {
+      margin-left: 45%;
+    }
+  }
   @media screen and (min-width: 1200px) {
     #wineTitle {
       padding: 40px 94px;
     }
     #wineLabel {
       padding: 5px;
+    }
+    .wine-bottle {
+      margin-left: 55%;
     }
   }
   @media screen and (min-width: 1400px) {
@@ -216,38 +268,15 @@
     #wineLabel {
       padding: 5px;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    #parallax2 {
-      margin-bottom: -5vw;
-    }
-    #logo-grey {
-      margin-top: 100px!important;
-    }
-  }
-
-  @media screen and (min-width: 808px) {
-    #parallax2 {
-      margin-bottom: -10vw;
-    }
-  }
-
-  @media screen and (min-width: 912px) {
-    #parallax2 {
-      margin-bottom: -13vw;
-    }
-  }
-
-  @media screen and (min-width: 1062px) {
-    #parallax2 {
-      margin-bottom: -15vw;
+    .wine-bottle {
+      margin-left: 55%;
     }
   }
 
   .margin-top-mobile {
     margin-top: 400px;
   }
+
   @media screen and (max-width: 768px) {
     
     .position-relative .row {
@@ -256,30 +285,13 @@
       transition: .5s;
 
     }
-    /* .position-relative:hover .row,
-    .position-relative:focus .row {
-      color: #FFF;
-      opacity: 1;
-    } */
-    /* .position-relative .bg-dark {
-      opacity: .4;
-      transition: .5s;
-      color: #FFFFFF;
-    } */
   }
-  /* .position-relative:hover .btn-secondary, #parallax3 .btn:hover {
-    box-shadow: 0px 2px 20px 0px #FFF;
-  } */
   .position-relative h6{
     font-weight: 600;
   } 
   .position-relative small {
     font-weight: 400;
   } 
-  /* .position-relative:hover h6,.position-relative:hover h2,.position-relative:hover small {
-    color: #FFF!important;
-    transition: .5s;
-  }  */
   #parallax2 small, #parallax2 h6 {
     color: #DDD;
     transition: .5s;
