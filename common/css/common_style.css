@@ -186,7 +186,13 @@
     padding: 40px;
   }
   .wine-bottle {
-    margin-left: 0; margin-top: -14vh; z-index: 500;
+    margin-left: 0; z-index: 500;
+  }
+  .orior {
+    margin-top: -25vh; 
+  }
+  .tascaioso {
+    margin-top: -25vh; 
   }
 
   #logo-grey {
