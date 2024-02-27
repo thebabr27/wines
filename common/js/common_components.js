@@ -3,7 +3,8 @@ homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
 mainPath = ""
- 
+/* keyCode = "5500" */
+keyCode = "github.io"
 imagesPath = '../../../'+mainPath+'assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
   homePath = '../../../'+mainPath+'home/homepage.html'
@@ -26,11 +27,11 @@ $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  j
 </div>`
 
 if (window.location.href.indexOf("en/") < 0) { 
-  langLink = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"> EN </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split(keyCode)[0]}${keyCode}/en${window.location.href.split(keyCode)[1]}"> EN </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split(keyCode)[0]}${keyCode}/en${window.location.href.split(keyCode)[1]}"><h2 class="btn-link-primary">EN</h2></a>`
 } else {
-  langLink = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"> IT </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split(keyCode+'/en')[0]}${keyCode}${window.location.href.split(keyCode+'/en')[1]}"> IT </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split(keyCode+'/en')[0]}${keyCode}${window.location.href.split(keyCode+'/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
 }
 $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 <div class="col-12 d-flex justify-content-between">
