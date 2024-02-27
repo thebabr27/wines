@@ -3,7 +3,7 @@ homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
 mainPath = ""
-keyCode
+ 
 imagesPath = '../../../'+mainPath+'assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
   homePath = '../../../'+mainPath+'home/homepage.html'
