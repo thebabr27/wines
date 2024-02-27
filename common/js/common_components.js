@@ -1,21 +1,21 @@
-/* imagesPath = '../wines/assets/images';
-homePath = '../wines/home/homepage.html'
-storyPath = '../wines/storia/storia.html'
-winesPath = '../wines/vini/'*/
+/* imagesPath = '../assets/images';
+homePath = '../home/homepage.html'
+storyPath = '../storia/storia.html'
+winesPath = '../vini/'*/
 
-imagesPath = '../../../wines/assets/images';
+imagesPath = '../../../assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
-  homePath = '../../../wines/home/homepage.html'
-  storyPath = '../../../wines/storia/storia.html'
-  winesPath = '../../../wines/vini/'
+  homePath = '../../../home/homepage.html'
+  storyPath = '../../../storia/storia.html'
+  winesPath = '../../../vini/'
 } else {
-  homePath = '../wines/home/homepage.html'
-  storyPath = '../wines/storia/storia.html'
-  winesPath = '../wines/vini/'
+  homePath = '../home/homepage.html'
+  storyPath = '../storia/storia.html'
+  winesPath = '../vini/'
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
-<img id="arrows" class="d-none" style="height: 60px;" src="../wines/assets/images/arrows.svg" alt="">
+<img id="arrows" class="d-none" style="height: 60px;" src="../assets/images/arrows.svg" alt="">
 </div>` */
 
 $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  justify-content-center">
@@ -25,11 +25,11 @@ $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  j
 </div>`
 
 if (window.location.href.indexOf("en/") < 0) { 
-  langLink = `<a class="nav-link" href="${window.location.href.split('github.io/wines')[0]}github.io/wines/en${window.location.href.split('github.io/wines')[1]}"> EN </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io/wines')[0]}github.io/wines/en${window.location.href.split('github.io/wines')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"> EN </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500')[0]}5500/en${window.location.href.split('5500')[1]}"><h2 class="btn-link-primary">EN</h2></a>`
 } else {
-  langLink = `<a class="nav-link" href="${window.location.href.split('github.io/wines/en')[0]}github.io/wines${window.location.href.split('github.io/wines/en')[1]}"> IT </a>`
-  langLink2 = `<a class="nav-link" href="${window.location.href.split('github.io/wines/en')[0]}github.io/wines${window.location.href.split('github.io/wines/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
+  langLink = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"> IT </a>`
+  langLink2 = `<a class="nav-link" href="${window.location.href.split('5500/en')[0]}5500${window.location.href.split('5500/en')[1]}"><h2 class="btn-link-primary">IT</h2></a>`
 }
 $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
 <div class="col-12 d-flex justify-content-between">
@@ -177,11 +177,12 @@ setTimeout(t=>{
       loadingGlass.remove()
 },2500)
 
-$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vigna5.jpg`});
+$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vigna5.png`});
 $('#parallax2').parallax({imageSrc: `${imagesPath}/vigna.jpeg`});
 $('#parallax3').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
 $('#parallax4').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
 $('#parallax5').parallax({imageSrc: `${imagesPath}/vitigno.jpeg`});
+$('#parallax6').parallax({imageSrc: `${imagesPath}/vigna.jpeg`});
 const menuItems = [
   'home','storia','collapse-rosso','rosso',
   'collapse-bianco','bianco',
@@ -302,7 +303,7 @@ function reveal() {
 
     function onScroll(e) {
       reveal();
-      if ($('html')[0].scrollTop > 51) {/* 
+      if ($('html')[0].scrollTop > 11) {/* 
         $('#wineTitle')[0].classList.remove("d-not")
         $('#wineTitle')[0].classList.add("animate__fadeInUp")
         setTimeout(t=>{
