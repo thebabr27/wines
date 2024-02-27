@@ -2,16 +2,16 @@
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
-
-imagesPath = '../../../assets/images';
+mainPath = "wines"
+imagesPath = '../../../'+mainPath+'assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
-  homePath = '../../../home/homepage.html'
-  storyPath = '../../../storia/storia.html'
-  winesPath = '../../../vini/'
+  homePath = '../../../'+mainPath+'home/homepage.html'
+  storyPath = '../../../'+mainPath+'storia/storia.html'
+  winesPath = '../../../'+mainPath+'vini/'
 } else {
-  homePath = '../home/homepage.html'
-  storyPath = '../storia/storia.html'
-  winesPath = '../vini/'
+  homePath = '../'+mainPath+'home/homepage.html'
+  storyPath = '../'+mainPath+'storia/storia.html'
+  winesPath = '../'+mainPath+'vini/'
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">

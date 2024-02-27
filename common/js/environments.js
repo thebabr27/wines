@@ -1,0 +1,3 @@
+mainPathDev = ""
+PathDev = ""
+pathTest = "wines/"
