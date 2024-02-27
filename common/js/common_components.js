@@ -7,13 +7,13 @@ mainPath = "wines/"
 keyCode = "github.io"
 imagesPath = '../../'+mainPath+'assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
-  homePath = '../../../'+mainPath+'home/homepage.html'
-  storyPath = '../../../'+mainPath+'storia/storia.html'
-  winesPath = '../../../'+mainPath+'vini/'
+  homePath = '../../../home/homepage.html'
+  storyPath = '../../../storia/storia.html'
+  winesPath = '../../../vini/'
 } else {
-  homePath = '../'+mainPath+'home/homepage.html'
-  storyPath = '../'+mainPath+'storia/storia.html'
-  winesPath = '../'+mainPath+'vini/'
+  homePath = '../home/homepage.html'
+  storyPath = '../storia/storia.html'
+  winesPath = '../vini/'
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
