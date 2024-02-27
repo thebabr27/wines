@@ -5,7 +5,7 @@ winesPath = '../vini/'*/
 mainPath = ""
 /* keyCode = "5500" */
 keyCode = "github.io"
-imagesPath = '../../../'+mainPath+'assets/images';
+imagesPath = '../../'+mainPath+'assets/images';
 if (window.location.href.indexOf("en/") < 0) { 
   homePath = '../../../'+mainPath+'home/homepage.html'
   storyPath = '../../../'+mainPath+'storia/storia.html'
