@@ -2,7 +2,7 @@
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
-mainPath = ""
+mainPath = "wines/"
 /* keyCode = "5500" */
 keyCode = "github.io"
 imagesPath = '../../'+mainPath+'assets/images';
