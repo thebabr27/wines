@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  
+<link rel="stylesheet" href="../../common/css/common_style.css">
+
+    <title>AlfaPrivativo</title>
+  </head>
+  <style>
+    .parallax {
+      width: 100vw
+}
+  </style>
+
+  <body onscroll="onScroll(event)" style="overflow: hidden;">
+    
+    <div id="arrowsWrapper" style="height: 80vh;" class="position-absolute w-100 d-flex justify-content-center">
+ 
+  </div>
+  <div id="loadingGlass" class=" position-absolute bg-light" style="height: 100vh; width: 100%; z-index:5000;">
+
+  </div>
+    <div class="menu d-none fixed-top animate__animated animate__fadeIn animate__faster " style="z-index:1000; background-color: #C27248; width:100%; height:100vh;">
+      
+    </div>
+    <div id="navbar" class="w-100 nav-transparent py-3 fixed-top" style="z-index:500!important">
+     
+    </div>
+    
+    <div id="parallax1" class="parallax w-100 " data-parallax="scroll" ></div>
+  
+    
+    <div id="main" class="w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../../assets/images/logo_lightgrey.svg" alt="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
+              <main class="px-3">
+                <img style="
+                float: left;
+                margin: 5px;" src="../../assets/images/letters/LetterA.svg" alt="">
+                <div >      
+                  lfaprivativo is a winery in the beautiful Umbria, where passion for the land and respect for nature have met in the production of natural wines. The idea that guides the creation of our wines is the simplification of agricultural and oenological processes, with the must to do not forgive any defect. The company's mission is to bring to the bottle a concept of authenticity, where the wine is left free to express itself, a messenger of seasonality and territory without the oppression of chemistry. Harvesting is done manually, carefully selecting the best bunches of grapes to ensure the highest quality.  </div>                
+              </main>
+            </div>                
+          </div>
+          <div class=" reveal revealslideInRight animate__slow col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img class="my-5" src="../../assets/images/grappolo.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="parallax2" class="w-100 parallax " data-parallax="scroll" data-image-src="../../assets/images/vigna.jpeg">
+      <div class="container-fluid text-center"><div class="row text-light">
+<!--         
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+              <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                <img src="../../assets/images/icons/membership.svg" alt="">
+              </button>
+              <h6>Identità</h6>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+              <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                <img src="../../assets/images/icons/wines.svg" alt="">
+              </button>
+              <h6>Cantina</h6>
+              <small>Attualmente Alfaprivativo, non avendo cantina propria, si appoggia a terzi, seguendo autonomamente coltivazione delle uve, vinificazione e affinamento. Il mercato a cui si affaccia, è quello del consumatore che ricerca territorio e stagionalità nel vino, che vuole in tavola un alimento vivo, espressione della Natura, più che frutto di una elegante miscela Chimica.  Pertanto,  Alfaprivativo crede fortemente nel nuovo filone del Vino Naturale, con approccio critico e analitico, senza giustificare difetti o deviazioni, con l’obiettivo di cambiare il pregiudizio sul concetto di Vino Naturale.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 px-0 position-relative">
+          <div class="w-100 position-absolute bg-dark h-100"></div>
+          <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+              <button style="width: 60px; height:60px" class="btn  btn-secondary mb-3 rounded rounded-pill">
+                <img src="../../assets/images/icons/market.svg" alt="">
+              </button>
+              <h6>Mercato</h6>
+              <small>Globalmente, il mercato del vino naturale è in forte crescita, con un consumatore sempre più attento alla sostenibilità dei processi agricoli/enologici, disposto a mettere in discussioni i dogmi che hanno caratterizzato fino ad oggi tale mercato.</small>
+            </div>
+          </div>
+        </div> -->
+
+      </div></div>
+    </div>
+
+    
+    <div id="main2" class="w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../../assets/images/logo_lightgrey.svg" alt="">
+      
+      <div class="container">
+        <div class="row kaushan">
+
+  
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../../assets/images/icons/wines.svg" alt="">
+                </button>
+                <h6>“Transparency and Authenticity”</h6>
+                <small>Transparency is our commitment. We want every consumer to know the story behind every bottle, from the vineyards to the winery. We pride ourselves on our authenticity and believe that clarity about our production process helps create a genuine bond with those who appreciate our wines.
+                </small>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn  btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../../assets/images/icons/market.svg" alt="">
+                </button>
+                <h6>“Craftsmanship and Tradition”</h6>
+                <small>Each bottle of wine is the result of meticulous craftsmanship and a deep respect for winemaking traditions. We recognize the beauty of tradition and combine it with a touch of innovation, which has always guided our engineering paths.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 px-0 position-relative text-center increase-text">
+            <div class="w-100 position-absolute h-100"></div>
+            <div class="card border-0 bg-transparent">
+              <div class="card-body p-5">
+                <button style="width: 60px; height:60px" class="btn btn-secondary mb-3 rounded rounded-pill">
+                  <img src="../../assets/images/icons/membership.svg" alt="">
+                </button>
+                <h6>Environmental Sustainability</h6>
+                <small>We are committed to sustainable and responsible agricultural practices. We avoid the use of pesticides and chemicals, favoring natural solutions to protect our vineyards.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="parallax4" class="position-relative w-100 " data-parallax="scroll" data-image-src="../../assets/images/vitigno2.jpeg">
+      <div class="container-fluid"><div class="row ">
+        
+        <div class="d-none d-md-block col-md-4 px-0 position-relative">
+        </div>
+        <div class="col-12 col-md-8 px-0 position-relative">
+        
+        <div class="w-100 position-absolute bg-dark h-100"></div>
+         <!--  <div class="card border-0 bg-transparent">
+            <div class="card-body p-5">
+         
+              <h2>Identità</h2>
+              <small>AlfaPrivativo è un’azienda agricola in fase embrionale, con 3 ettari di vigna dislocata. (Gualdo Tadino e Umbertide). L’attuale produzione è di 2000 bottiglie con due etichette, La futura produzione consiste di circa 15000 bottiglie, con 5 diverse etichette. L’identità di Alfaprivativo è molto definita: portare un vino di elevata integrità in tavola, semplificando i processi agricoli ed enologici, senza scendere a compromessi sulla Qualità.  </small>
+            </div>
+          </div> -->
+        </div>
+
+
+      </div></div>
+    </div>
+
+    
+    <div id="main2" class="w-100 bg-white ">
+      <img id="logo-grey" class="position-absolute w-100 py-4 px-2" src="../../assets/images/logo_lightgrey.svg" alt="">
+      <div class="container">
+        <div class="row">
+          
+          <div class=" reveal revealslideInLeft animate__slow col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img class="my-5" src="../../assets/images/alex_simone2.png" style="border-radius: 500px; width: 356px; height: auto" alt="">
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="cover-container d-flex w-100 h-100 px-3 py-5 mx-auto flex-column justify-content-center">            
+              <main class="px-3">
+                <h2 style="font-weight: 300; padding-bottom:20px!important; border-bottom: 1px solid grey" class="py-2 mb-3 text-center ">Who we are
+                </h2>
+                <img style="
+                float: left;
+                margin: 5px;" src="../../assets/images/letters/LetterA.svg" alt="">
+                <small >      
+                  Alex and Simone, two friends who since childhood have shared sports, academic paths and passions, including that for nature and wine. The Alfaprivativo project was born in 2021 as a desire to bring a concept of authenticity and passion to the bottle, starting again from the traditions of our grandparents.  <b><a href="../../storia/storia.html">Read the story...</a></b>
+                </small>                
+              </main>
+            </div>                
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="parallax5" class=" position-relative w-100 " data-parallax="scroll" data-image-src="../../assets/images/vitigno2.jpeg">
+      <!-- <div class="card bg-transparent border-0 d-flex justify-content-center text-center">
+           <div class="card-body my-5 border-0 text-white">
+
+              <iframe id="oriorVideo" class="" style="width: 100%; min-height:400px" src="https://www.youtube.com/embed/COsuulNztFU?si=2KfKBRGl_8UESAfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           </div>
+         </div>    -->
+     </div>
+
+     <footer class="w-100 bg-dark "></footer>
+     
+     <footer class="w-100 bg-dark2 "></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha512-Blu6KWaTqestULmtJUTB2mwDFTB/FDRuTHV52Uu5dTFVQZ8YWUq2LuxN/brNEjWAqlHr50oAbxrydsuxoK/mqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../../common/js/environments.js"></script>
+  <script src="../../common/js/common_components.js"></script>
+  
+  </body>
+  </html>
