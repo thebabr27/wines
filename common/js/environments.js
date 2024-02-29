@@ -3,7 +3,7 @@ const environment = {
         keyCode: "5500"
     },
     col: {
-        keyCode: "github.io"
+        keyCode: "github.io/wines"
     },
     prod: {
         keyCode: "alfaprivativo.com"
