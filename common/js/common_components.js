@@ -4,7 +4,7 @@ storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
 keyCode = environment.col.keyCode
 
-imagesPath = '../assets/images';
+imagesPath = '../wines/assets/images';
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'
