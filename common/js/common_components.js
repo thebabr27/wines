@@ -4,7 +4,7 @@ storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
 keyCode = environment.col.keyCode
 
-imagesPath = '../../assets/images';
+imagesPath = '../assets/images';
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'
@@ -21,6 +21,7 @@ if (window.location.href.indexOf("en/") > -1) {
   addressTitle = 'Address'
   cityTitle = 'City'
   zipTitle = 'Zip code'
+  imagesPath = '../../assets/images';
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
