@@ -2,18 +2,25 @@
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
-mainPath = "wines/"
-/* keyCode = "5500" */
-keyCode = "github.io"
-imagesPath = '../../'+mainPath+'assets/images';
+keyCode = environment.col.keyCode
+
+imagesPath = '../../assets/images';
+homePath = '../home/homepage.html'
+storyPath = '../storia/storia.html'
+winesPath = '../vini/'
+storyTitle = 'LA STORIA'
+winesTitle = 'VINI'
+contactsTitle = 'CONTATTI'
+addressTitle = 'Indirizzo'
+cityTitle = 'Località'
+zipTitle = 'Cap'
 if (window.location.href.indexOf("en/") > -1) { 
-  homePath = '../../../home/homepage.html'
-  storyPath = '../../../storia/storia.html'
-  winesPath = '../../../vini/'
-} else {
-  homePath = '../home/homepage.html'
-  storyPath = '../storia/storia.html'
-  winesPath = '../vini/'
+  storyTitle = 'STORY'
+  winesTitle = 'WINES'
+  contactsTitle = 'CONTACTS'
+  addressTitle = 'Address'
+  cityTitle = 'City'
+  zipTitle = 'Zip code'
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
@@ -44,11 +51,11 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
       <a class="nav-link" href="${homePath}">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="${storyPath}">LA STORIA</a>
+      <a class="nav-link" href="${storyPath}">${storyTitle}</a>
     </li>
     <li id="viniDropdown" class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        VINI
+        ${winesTitle}
       </a>
       <ul style="padding-top:12px" class="dropdown-menu animate__fadeInDown animate__animated animate__faster" aria-labelledby="navbarDropdown">
         <li style="margin-top:-5px"><a class="dropdown-item" href="${winesPath}tascaioso.html">Tascaioso</a></li>
@@ -57,7 +64,7 @@ $('#navbar')[0].innerHTML = `<div class="container"><div class="row">
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#footer">CONTATTI</a>
+      <a class="nav-link" href="#footer">${contactsTitle}</a>
     </li>
     <li class="nav-item">
       ${langLink}
@@ -80,7 +87,7 @@ $('footer')[0].innerHTML = `<div class="container"><div class="row">
       Alfaprivativo Società Agricola Semplice
     </div>
     <div class="card-body">
-    - Indirizzo: Fraz. Morano Osteria 125/A <br>- Località: Gualdo Tadino (PG) - Cap: 06023  <br>
+    - ${addressTitle}: Fraz. Morano Osteria 125/A <br>- ${cityTitle}: Gualdo Tadino (PG) - ${zipTitle}: 06023  <br>
 - PI: 03881990547 <br>- 
 Tel. Simone: +39 3387802485 <br>- Alex: +39 3493177129 <br>- Email: alfaprivativowines@libero.it
     </div>
@@ -118,10 +125,10 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
     <a class="nav-link" href="${homePath}"><h2 class="btn-link-dark">HOME</h2></a>
   </li>
   <li class="storia nav-item">
-    <a class="nav-link" href="${storyPath}"><h2 class="btn-link-primary">LA STORIA</h2></a>
+    <a class="nav-link" href="${storyPath}"><h2 class="btn-link-primary">${storyTitle}</h2></a>
   </li>
   <li class="collapse-vini nav-item" data-bs-toggle="collapse" data-bs-target="#collapseVini" >
-    <a class="nav-link" href="#"><h2 class="btn-link-primary">VINI</h2></a>
+    <a class="nav-link" href="#"><h2 class="btn-link-primary">${winesTitle}</h2></a>
   </li>
     <div id="collapseVini" class="accordion-collapse collapse" data-bs-parent="#menuList">   
       <ul class="nav d-flex flex-column text-center">
@@ -131,7 +138,7 @@ $('.menu')[0].innerHTML = `<div class="container h-100 d-flex flex-column justif
       </ul>
     </div>
   <li class="contatti nav-item">
-    <a class="nav-link" href="#footer"><h2 class="btn-link-primary" onclick="action('closeMenu')" >CONTATTI</h2></a>
+    <a class="nav-link" href="#footer"><h2 class="btn-link-primary" onclick="action('closeMenu')" >${contactsTitle}</h2></a>
   </li>
   <li class="en nav-item">
     ${langLink2}
