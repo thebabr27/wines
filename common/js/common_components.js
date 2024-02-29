@@ -1,10 +1,13 @@
-/* imagesPath = '../wines/assets/images';
+/* imagesPath = '../assets/images';
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'*/
 keyCode = environment.col.keyCode
 
-imagesPath = '../wines/assets/images';
+imagesPath = '../assets/images';
+if (keyCode.indexOf("github") > -1) {
+  imagesPath = '../wines/assets/images';
+}
 homePath = '../home/homepage.html'
 storyPath = '../storia/storia.html'
 winesPath = '../vini/'
@@ -22,6 +25,9 @@ if (window.location.href.indexOf("en/") > -1) {
   cityTitle = 'City'
   zipTitle = 'Zip code'
   imagesPath = '../../assets/images';
+  if (keyCode.indexOf("github") > -1) {
+    imagesPath = '../../wines/assets/images';
+  }
 }
 
 /* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
