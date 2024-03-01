@@ -42,6 +42,9 @@
   0% {transform: translateY(-100px)}
   100% {transform: translateY(0)}
 }
+.opacity {
+  opacity: .4;
+}
 html, body {
   overflow-x: hidden;
 }

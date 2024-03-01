@@ -1,7 +1,3 @@
-/* imagesPath = '../assets/images';
-homePath = '../home/homepage.html'
-storyPath = '../storia/storia.html'
-winesPath = '../vini/'*/
 keyCode = environment.col.keyCode
 
 imagesPath = '../assets/images';
@@ -26,9 +22,6 @@ if (window.location.href.indexOf("en/") > -1) {
  
 }
 
-/* $('#arrowsWrapper')[0].innerHTML = `<div class="position-relative w-100 d-flex flex-column justify-content-end">
-<img id="arrows" class="d-none" style="height: 60px;" src="../assets/images/arrows.svg" alt="">
-</div>` */
 
 $('#loadingGlass')[0].innerHTML = `<div class="h-100 w-100 d-flex flex-column  justify-content-center">
   <div class="d-flex justify-content-center p-5">
@@ -158,38 +151,22 @@ const menuList = document.getElementById('menuList');
 const loadingGlass = document.getElementById('loadingGlass');
 const video = document.getElementById('video');
 const main = document.getElementById('main');
-/* 
-if (!localStorage.getItem('alfaprivativo-cookies-accept') && window.location.href.indexOf('homepage') == -1) {
-  window.location.href = "../home/homepage.html"
-} else {
-  loadingGlass.classList.remove('d-none')
-} */
-
-//localStorage.removeItem('alfaprivativo-cookies-accept')
 window.scrollTo(0,0);
 setTimeout(t=>{  
- /*  if (!localStorage.getItem('alfaprivativo-cookies-accept')
-    && window.location.href.indexOf('homepage') == -1) {
-  window.location.href = "../home/homepage.html"
-  } else {*/
+
 window.scrollTo(0,0);
     loadingGlass.classList.add('animate__animated')
     loadingGlass.classList.add('animate__fadeOut')
-  /*}*/
+
 },2000) 
 setTimeout(t=>{   
       action('activateScroll')
       loadingGlass.classList.add('animate__animated');
-      
-      console.log("cookies accepted: ",localStorage.getItem('alfaprivativo-cookies-accept'))
-      if (!localStorage.getItem('alfaprivativo-cookies-accept')) {
-        showCookiesModal();
-      }
       main.classList.add('animate__animated')
       loadingGlass.remove()
 },2500)
 
-$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vigna5.png`});
+$('#parallax1').parallax({naturalHeight: 1370, imageSrc: `${imagesPath}/vigna5.jpg`});
 $('#parallax2').parallax({imageSrc: `${imagesPath}/vigna.jpeg`});
 $('#parallax3').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
 $('#parallax4').parallax({imageSrc: `${imagesPath}/vitigno2.jpeg`});
@@ -217,22 +194,14 @@ $('.nav-item').on('click',e=>{
   
 })
 
-/* START *//* 
-setTimeout(t=>{
-  moveArrows()
-},2000) */
-
-function showCookiesModal() {
-  $('button[data-bs-toggle="modal"]').click()
+function openMenu() {
+  console.log("opening menu")
+  applyClasses(['d-block'],['dropdown-menu'],[])
 }
 
-function acceptCookies() {
-  localStorage.setItem('alfaprivativo-cookies-accept','true')
-  console.log("cookies accepted: ",localStorage.getItem('alfaprivativo-cookies-accept'))
-}
-
-function denyCookies() {
-  localStorage.removeItem('alfaprivativo-cookies-accept')
+function closeMenu() {
+  console.log("closing menu")
+  removeClasses(['d-block'],['dropdown-menu'],[])
 }
 
 function applyClasses(kl, elements, exceptions) {
@@ -282,13 +251,6 @@ function action(action) {
   }
 }
 
-/* function moveArrows() {
-  if ($('html')[0].scrollTop < 1) {
-    setTimeout(
-      t=>{$('#arrows')[0].classList.remove('d-none')
-    },2000)
-  }
-} */
 function reveal() {
       var allReveals = [
         document.querySelectorAll(".reveal"),
@@ -315,13 +277,6 @@ function reveal() {
 
     function onScroll(e) {
       reveal();
-      if ($('html')[0].scrollTop > 11) {/* 
-        $('#wineTitle')[0].classList.remove("d-not")
-        $('#wineTitle')[0].classList.add("animate__fadeInUp")
-        setTimeout(t=>{
-          $('#wineTitle')[0].classList.remove("animate__fadeInUp")
-        },2000) */
-      }
       if ($('html')[0].scrollTop < 50) {
         
         $('#navbar')[0].classList.remove('bg-white')
@@ -329,7 +284,7 @@ function reveal() {
         $('#navbar')[0].classList.remove('shadow')
         $('#navbar')[0].classList.add('nav-transparent')
         $('.hamburger img').attr('src', `${imagesPath}/icons/hamburger_white.svg`)
-        /* moveArrows() */
+      
         
       } else {
         let classes = [];
@@ -341,7 +296,7 @@ function reveal() {
           $('#navbar')[0].classList.add('shadow')
           $('#navbar')[0].classList.remove('nav-transparent')
           $('.hamburger img').attr('src', `${imagesPath}/icons/hamburger.svg`)
-          /* $('#arrows')[0].classList.add('d-none') */
+
         }
       }
     }
